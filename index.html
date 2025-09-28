@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Taís Gonçalves - Consultoria</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./assets/images/logo.svg" alt="" />
+        <button onclick="toggleNavbar()" id="navbar-btn">
+          <img src="./assets/icons/DotsThreeIcon.svg" alt="" />
+          <span class="sr-only">Abrir e fechar menu de navegação</span>
+        </button>
+      </div>
+
+      <nav id="navbar">
+        <div>
+          <img src="./assets/images/logo.svg" alt="" />
+          <img
+            style="opacity: 0"
+            src="./assets/icons/DotsThreeIcon.svg"
+            alt=""
+          />
+        </div>
+        <div class="separator"></div>
+        <ul>
+          <li>
+            <a href="Ínicio">
+              Ínicio
+              <img src="./assets/icons/House.svg" alt="" />
+            </a>
+          </li>
+          <div class="separator"></div>
+          <li>
+            <a href="#Sobre">
+              Sobre
+              <img src="./assets/icons/UsersThree.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#Etapas">
+              Etapas
+              <img src="./assets/icons/BookOpenText.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#Serviços">
+              Serviços
+              <img src="./assets/icons/Package.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#Contato">
+              Contato
+              <img src="./assets/icons/Phone.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="separator"></div>
+
+        <div class="buttons">
+          <a href="https://wp.com/" class="btn whatsapp-btn">
+            Entrar em contato
+            <img src="./assets/icons/whatsapp.svg" alt="" />
+          </a>
+          <a
+            href="https://instagram.com/taisgoncalves_consultoria"
+            class="btn instagram-btn"
+          >
+            Ver no instagram
+            <img src="./assets/icons/instagram.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+      <div class="overlay" onclick="toggleNavbar()"></div>
+    </header>
+
+    <main>
+      <section id="home">
+        <span class="instagram-balloon">@taisgoncalves_consultoria</span>
+        <div>
+          <h1>
+            Taís Gonçalves <br />
+            Consultoria.
+          </h1>
+          <p>
+            Garanta integridade e <br />
+            reputação para sua empresa.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a href="" class="btn whatsapp-btn">
+            Fale com uma profissional
+            <img src="./assets/icons/whatsapp.svg" alt="" />
+          </a>
+          <a href="" class="btn outline-btn">
+            Ver no instagram
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+        </div>
+
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/icons/Building.svg" alt="" />
+            <h4>Assessoria</h4>
+            <p>para empresas.</p>
+          </div>
+          <div class="card-dark card">
+            <img src="./assets/icons/Checks.svg" alt="" />
+            <h4>De contratos</h4>
+            <p>para resultados.</p>
+          </div>
+        </div>
+
+        <img class="tais-img" src="./assets/images/tais-goncalves.svg" alt="" />
+      </section>
+    </main>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
