@@ -237,9 +237,27 @@ nav {
     align-items: center;
 
     padding: 0.5rem 1rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0px;
+
+      background-color: var(--color-white);
+      opacity: 0.4;
+      transition: all 0.3s;
+    }
 
     &:hover {
       background-color: #353535;
+
+      &:after {
+        width: 100%;
+      }
     }
   }
 
@@ -267,32 +285,58 @@ nav {
 
 #home {
   padding-top: 4rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 
   .instagram-balloon {
-    background-color: var(--color-beige);
+    width: fit-content;
+    margin-inline: auto;
 
-    padding: 0.25rem 0.75rem;
-    border-radius: 0px 8px 0px 8px;
+    span {
+      background-color: var(--color-beige);
+      display: block;
 
-    font-size: var(--text-sm);
-    margin-left: 1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0px 8px 0px 8px;
+
+      font-size: var(--text-sm);
+      margin-left: 1rem;
+    }
   }
 
   & > div {
     padding: 0rem 1rem;
+    text-align: center;
   }
 
   .buttons {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
+
     flex-direction: column;
+    align-items: center;
 
     gap: 0.75rem;
+
+    a {
+      max-width: 100%;
+      width: 380px;
+    }
   }
 
   .tais-img {
-    width: 100%;
-    margin-top: 4.5em;
+    padding-block: 1rem;
+
+    img {
+      max-width: 100%;
+      border-radius: 1rem;
+
+      margin-top: 4.5em;
+    }
   }
 }
 
@@ -428,7 +472,7 @@ details[open] summary .arrow {
   display: flex;
   flex-direction: column;
 
-  gap: 1.25rem;
+  gap: -1rem;
 
   h3 {
     text-align: center;
@@ -438,31 +482,46 @@ details[open] summary .arrow {
 
 #about article {
   display: flex;
-  border: 1px solid var(--color-gray-dark);
-
-  background-color: var(--color-beige);
 
   border-radius: 8px;
   overflow: hidden;
 
-  max-width: 372px;
-  width: 100%;
+  width: 324px;
+  max-width: 100%;
+  text-align: center;
 
   &:nth-child(4) {
-    background-color: var(--color-gray-dark);
-    color: var(--color-white);
+    h4 div {
+      padding: 0.5rem;
+      background-color: var(--color-gray-dark);
+
+      display: flex;
+      border-radius: 9999999px;
+    }
   }
 
   h4 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    align-items: center;
 
     margin-bottom: 0.5rem;
 
     width: 100%;
 
+    div {
+      padding: 0.5rem;
+      background-color: var(--color-beige);
+
+      display: flex;
+      border-radius: 9999999px;
+
+      margin-bottom: 0.5rem;
+    }
+
     img {
-      width: 20px;
+      width: 24px;
     }
   }
 
