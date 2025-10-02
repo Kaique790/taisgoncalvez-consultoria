@@ -1,7 +1,12 @@
 const navbar = document.getElementById("navbar");
-const navbarBtn = document.getElementById("navbar-btn");
 
 function toggleNavbar() {
   navbar.classList.toggle("active");
-  navbarBtn.classList.toggle("active");
+}
+
+function scrollToTop() {
+  document.body.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
