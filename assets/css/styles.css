@@ -159,8 +159,12 @@ i {
   font-size: var(--text-title);
   line-height: 100%;
 
-  margin-block: 1rem;
   letter-spacing: -0.25%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
 }
 
 header {
@@ -182,22 +186,6 @@ header {
   }
 }
 
-.logo {
-  width: 32px;
-  height: 32px;
-}
-
-.close-navbar-btn {
-  padding: 0.25rem;
-
-  top: 8px;
-  border-radius: 0.25rem;
-
-  &:hover {
-    background: #64646470;
-  }
-}
-
 nav {
   position: fixed;
   height: 100dvh;
@@ -212,7 +200,7 @@ nav {
   pointer-events: none;
 
   transition: all 0.3s;
-  width: 340px;
+  width: 290px;
 
   max-width: 100%;
 
@@ -284,14 +272,36 @@ nav {
     .btn {
       width: 100%;
     }
+
+    .outline-btn {
+      color: var(--color-white);
+      border-color: var(--color-white);
+    }
+
+    .outline-btn:hover {
+      background-color: var(--color-white);
+      color: var(--color-gray-dark);
+    }
+  }
+}
+
+.close-navbar-btn {
+  padding: 0.25rem;
+
+  top: 8px;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background: #64646470;
   }
 }
 
 #scroll-to-top {
   padding: 0.5rem 0.65rem;
-  border-radius: 100%;
 
-  bottom: 1rem;
+  border-radius: 100%;
+  border: 1px solid var(--color-gray-dark);
+  bottom: 0rem;
   right: 1rem;
 
   z-index: 1;
@@ -299,10 +309,24 @@ nav {
   background-color: var(--color-beige);
   position: fixed;
 
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.4s;
+
   &:hover img {
     transform: translateY(-10%);
     transition: all 0.3s;
   }
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+
+  bottom: 1rem;
+  pointer-events: auto;
 }
 
 #home {
@@ -341,6 +365,13 @@ nav {
       font-size: var(--text-sm);
       margin-left: 1rem;
     }
+  }
+
+  .title-container p {
+    margin-top: 0.75rem;
+  }
+  .title-container .title {
+    margin-top: 0.75rem;
   }
 
   & > div {
@@ -524,6 +555,9 @@ details[open] summary .arrow {
   border-radius: 8px;
   overflow: hidden;
 
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+
   width: 100%;
   max-width: 100%;
 
@@ -585,6 +619,18 @@ details[open] summary .arrow {
 
   color: var(--color-white);
 
+  & > img {
+    width: 100%;
+    height: 158px;
+
+    border-radius: 0.5rem;
+    object-fit: cover;
+
+    filter: brightness(75%);
+
+    margin-bottom: 1rem;
+  }
+
   .steps-container {
     margin-top: 1.5rem;
   }
@@ -600,7 +646,7 @@ details[open] summary .arrow {
     content: "";
     position: absolute;
 
-    left: -32px;
+    left: -31px;
     top: 1px;
 
     border-radius: 100%;
@@ -667,6 +713,7 @@ details[open] summary .arrow {
     flex-direction: column;
 
     gap: 0.15rem;
+    transition: all 0.3s;
 
     p {
       opacity: 0.8;
@@ -682,6 +729,10 @@ details[open] summary .arrow {
     );
 
     color: var(--color-white);
+
+    &:hover {
+      transform: scale(105%);
+    }
   }
   .beige-card {
     background-image: linear-gradient(
@@ -695,10 +746,18 @@ details[open] summary .arrow {
     border: 1.5px solid var(--color-gray-dark);
 
     box-shadow: 2px 2px 0px var(--color-gray-dark);
+
+    &:hover {
+      transform: scale(105%);
+    }
   }
 
   .outline-card {
     border: 1.5px solid var(--color-gray-dark);
+
+    &:hover {
+      transform: scale(105%);
+    }
   }
 
   .long-cards {
@@ -716,6 +775,10 @@ details[open] summary .arrow {
 
       justify-content: space-between;
       align-items: center;
+    }
+
+    .card:hover {
+      transform: scale(105%);
     }
   }
 }
