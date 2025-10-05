@@ -333,6 +333,8 @@ nav {
   padding-top: 4rem;
   position: relative;
 
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
 
@@ -340,15 +342,17 @@ nav {
 
   .hero-bg {
     position: absolute;
+    z-index: -2;
 
     top: 0;
     left: 50%;
-
     transform: translateX(-50%);
-    z-index: -2;
+
+    height: 80%;
+    width: 100vw;
 
     opacity: 0.15;
-    height: 80%;
+    object-fit: cover;
   }
 
   .instagram-balloon {
@@ -399,7 +403,8 @@ nav {
 
   .tais-img {
     margin-top: 2rem;
-    width: 100%;
+    max-width: 100%;
+    width: 420px;
 
     img {
       max-width: 100%;
