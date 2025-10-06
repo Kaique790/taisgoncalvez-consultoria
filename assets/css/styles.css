@@ -176,7 +176,7 @@ header {
     padding-block: 0.75rem;
     width: 100%;
 
-    max-width: 1280px;
+    max-width: 1128px;
     margin-inline: auto;
 
     display: flex;
@@ -456,6 +456,9 @@ nav {
 #about {
   padding-top: 2.5rem;
 
+  max-width: 1128px;
+  margin-inline: auto;
+
   & > div {
     padding-inline: 1rem;
   }
@@ -725,6 +728,23 @@ details[open] summary .arrow {
     }
   }
 
+  .card .icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    div {
+      display: flex;
+
+      padding: 0.5rem;
+      border-radius: 999999rem;
+    }
+
+    div:first-child {
+      margin-right: -0.75rem;
+    }
+  }
+
   .dark-card {
     background-image: linear-gradient(
       -45deg,
@@ -735,10 +755,21 @@ details[open] summary .arrow {
 
     color: var(--color-white);
 
+    .icons div:first-child {
+      background-color: var(--color-white);
+      color: var(--color-gray-light);
+    }
+
+    .icons div {
+      background-color: var(--color-gray-dark);
+      color: var(--color-white);
+    }
+
     &:hover {
       transform: scale(105%);
     }
   }
+
   .beige-card {
     background-image: linear-gradient(
       -45deg,
@@ -752,6 +783,16 @@ details[open] summary .arrow {
 
     box-shadow: 2px 2px 0px var(--color-gray-dark);
 
+    .icons div:first-child {
+      background-color: var(--color-white);
+      color: var(--color-gray-dark);
+    }
+
+    .icons div {
+      background-color: var(--color-gray-dark);
+      color: var(--color-white);
+    }
+
     &:hover {
       transform: scale(105%);
     }
@@ -759,6 +800,16 @@ details[open] summary .arrow {
 
   .outline-card {
     border: 1.5px solid var(--color-gray-dark);
+
+    .icons div:first-child {
+      background-color: var(--color-beige);
+      color: var(--color-gray-dark);
+    }
+
+    .icons div {
+      background-color: var(--color-gray-dark);
+      color: var(--color-white);
+    }
 
     &:hover {
       transform: scale(105%);
