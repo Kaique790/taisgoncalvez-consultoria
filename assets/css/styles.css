@@ -50,6 +50,7 @@ html {
 summary::-webkit-details-marker {
   display: none;
 }
+
 summary::marker {
   content: "";
 }
@@ -171,7 +172,7 @@ header {
   background-color: var(--color-gray-dark);
   min-width: 100vw;
 
-  & > div {
+  &>div {
     padding-inline: 1rem;
     padding-block: 0.75rem;
     width: 100%;
@@ -204,7 +205,7 @@ nav {
 
   max-width: 100%;
 
-  & > div:first-child {
+  &>div:first-child {
     width: 100%;
     display: flex;
 
@@ -257,10 +258,11 @@ nav {
     right: 0;
     pointer-events: all;
 
-    & ~ .overlay {
+    &~.overlay {
       display: block;
     }
   }
+
   .buttons {
     padding-top: 0.5rem;
     padding-inline: 1rem;
@@ -374,11 +376,12 @@ nav {
   .title-container p {
     margin-top: 0.75rem;
   }
+
   .title-container .title {
     margin-top: 0.75rem;
   }
 
-  & > div {
+  &>div {
     padding: 0rem 1rem;
     text-align: center;
   }
@@ -459,8 +462,10 @@ nav {
   max-width: 1128px;
   margin-inline: auto;
 
-  & > div {
-    padding-inline: 1rem;
+  padding-inline: 1rem;
+
+  .cards-container-title {
+    margin-top: 1.5rem;
   }
 
   .obs p {
@@ -470,54 +475,57 @@ nav {
 
     border-left: 4px solid var(--color-beige);
   }
+
+  summary {
+    cursor: pointer;
+    width: 240px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.375rem;
+
+    padding: 0.25rem;
+
+    font-weight: bold;
+  }
+
+  details {
+    margin-top: 1rem;
+  }
+
+  details:first-child {
+    margin-top: 2rem;
+  }
+
+  summary .arrow {
+    display: inline-block;
+
+    transition: transform 0.3s;
+    transform: rotate(-90deg);
+
+    background: none;
+  }
+
+  details p {
+    background-color: #d9d9d98e;
+    padding: 0.25rem 0.5rem;
+
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  details[open] summary .arrow {
+    transform: rotate(0);
+  }
 }
 
-summary {
-  cursor: pointer;
-  width: 240px;
-  max-width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.375rem;
-
-  padding: 0.25rem;
-
-  font-weight: bold;
-}
-
-details {
-  margin-top: 1rem;
-}
-
-details:first-child {
-  margin-top: 2rem;
-}
-
-summary .arrow {
-  display: inline-block;
-
-  transition: transform 0.3s;
-  transform: rotate(-90deg);
-
-  background: none;
-}
-
-details p {
-  background-color: #d9d9d98e;
-  padding: 0.25rem 0.5rem;
-
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-details[open] summary .arrow {
-  transform: rotate(0); /* seta pra cima */
-}
 
 #about .contact-links {
   display: flex;
+  align-items: center;
+
   gap: 1rem;
 
   a:first-child {
@@ -536,6 +544,12 @@ details[open] summary .arrow {
   img {
     width: 26px;
   }
+
+
+  @media (width >=728px) {
+    justify-content: center;
+
+  }
 }
 
 #about .cards-container {
@@ -545,14 +559,26 @@ details[open] summary .arrow {
   padding-top: 0.75rem;
   padding-block: 1.75rem;
 
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 
   h3 {
     text-align: center;
     margin-bottom: 0.5rem;
+  }
+
+
+  @media (width >=728px) {
+    width: 100%;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  @media (width >=1000px) {
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   }
 }
 
@@ -566,7 +592,7 @@ details[open] summary .arrow {
   padding-block: 0.5rem;
   padding-inline: 0.75rem;
 
-  width: 100%;
+  width: 480px;
   max-width: 100%;
 
   border: 1px solid #e0e0e0;
@@ -602,24 +628,26 @@ details[open] summary .arrow {
     }
   }
 
-  & > img {
+  &>img {
     border-right: 1px solid var(--color-gray-dark);
 
     height: 140px;
   }
 
-  & > div {
+  &>div {
     padding: 0.75rem;
+  }
+
+  @media (width >=1000px) {
+    width: 100%;
   }
 }
 
 #steps {
-  background-image: linear-gradient(
-    -45deg,
-    var(--color-gray-dark),
-    #2a2a2afa,
-    var(--color-gray-dark)
-  );
+  background-image: linear-gradient(-45deg,
+      var(--color-gray-dark),
+      #2a2a2afa,
+      var(--color-gray-dark));
 
   padding: 2rem 1rem;
   padding-bottom: 4rem;
@@ -627,7 +655,7 @@ details[open] summary .arrow {
 
   color: var(--color-white);
 
-  & > img {
+  &>img {
     width: 100%;
     height: 158px;
 
@@ -746,12 +774,10 @@ details[open] summary .arrow {
   }
 
   .dark-card {
-    background-image: linear-gradient(
-      -45deg,
-      var(--color-gray-dark),
-      #484848,
-      var(--color-gray-dark)
-    );
+    background-image: linear-gradient(-45deg,
+        var(--color-gray-dark),
+        #484848,
+        var(--color-gray-dark));
 
     color: var(--color-white);
 
@@ -771,12 +797,10 @@ details[open] summary .arrow {
   }
 
   .beige-card {
-    background-image: linear-gradient(
-      -45deg,
-      var(--color-beige),
-      #f8d9b3,
-      var(--color-beige)
-    );
+    background-image: linear-gradient(-45deg,
+        var(--color-beige),
+        #f8d9b3,
+        var(--color-beige));
 
     color: var(--color-gray-dark);
     border: 1.5px solid var(--color-gray-dark);
