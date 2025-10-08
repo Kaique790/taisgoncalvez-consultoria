@@ -371,6 +371,11 @@ nav {
       font-size: var(--text-sm);
       margin-left: 1rem;
     }
+
+
+    @media (width >=728px) {
+      margin-inline: 0rem auto;
+    }
   }
 
   .title-container p {
@@ -384,6 +389,11 @@ nav {
   &>div {
     padding: 0rem 1rem;
     text-align: center;
+
+    @media (width >=728px) {
+      text-align: left;
+      grid-column: 1;
+    }
   }
 
   .buttons {
@@ -402,6 +412,10 @@ nav {
       max-width: 420px;
       width: 100%;
     }
+
+    @media (width >=728px) {
+      align-items: start;
+    }
   }
 
   .tais-img {
@@ -413,6 +427,17 @@ nav {
       max-width: 100%;
       width: 100%;
     }
+
+    @media (width >=728px) {
+      grid-column: 2;
+    }
+  }
+
+  @media (width >=728px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: start;
   }
 }
 
