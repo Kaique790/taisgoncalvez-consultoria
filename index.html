@@ -1,380 +1,418 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.svg"
+      type="image/x-icon"
+    />
 
-  <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Taís Gonçalves - Consultoria</title>
+  </head>
 
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <title>Taís Gonçalves - Consultoria</title>
-</head>
-
-<body>
-  <header>
-    <div>
-      <img class="logo" src="./assets/images/logo.svg" alt="" />
-      <button onclick="toggleNavbar()" id="navbar-btn">
-        <img src="./assets/icons/DotsThreeIcon.svg" alt="" />
-        <span class="sr-only">Abrir menu de navegação</span>
-      </button>
-    </div>
-
-    <nav id="navbar">
+  <body>
+    <header>
       <div>
         <img class="logo" src="./assets/images/logo.svg" alt="" />
-        <button onclick="toggleNavbar()">
-          <img src="./assets/icons/x.svg" class="close-navbar-btn" />
-          <p class="sr-only">Fechar menu de navegação</p>
+        <button onclick="toggleNavbar()" id="navbar-btn">
+          <img src="./assets/icons/DotsThreeIcon.svg" alt="" />
+          <span class="sr-only">Abrir menu de navegação</span>
         </button>
       </div>
-      <div class="separator"></div>
-      <ul>
-        <li>
-          <a href="#home">
-            Ínicio
-            <img src="./assets/icons/House.svg" alt="" />
-          </a>
-        </li>
+
+      <nav id="navbar">
+        <div>
+          <img class="logo" src="./assets/images/logo.svg" alt="" />
+          <button onclick="toggleNavbar()">
+            <img src="./assets/icons/x.svg" class="close-navbar-btn" />
+            <p class="sr-only">Fechar menu de navegação</p>
+          </button>
+        </div>
         <div class="separator"></div>
-        <li>
-          <a href="#about">
-            Sobre
-            <img src="./assets/icons/UsersThree.svg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#steps">
-            Etapas
-            <img src="./assets/icons/BookOpenText.svg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#services">
-            Serviços
-            <img src="./assets/icons/Package.svg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#Contato">
-            Contato
-            <img src="./assets/icons/Phone.svg" alt="" />
-          </a>
-        </li>
-      </ul>
-      <div class="separator"></div>
-
-      <div class="buttons">
-        <a target="_blank" href="https://wa.me/557981391354" class="btn outline-btn">
-          Entrar em contato
-          <i class="ph ph-whatsapp-logo"></i>
-        </a>
-        <a target="_blank" href="https://instagram.com/taisgoncalves_consultoria" class="btn outline-btn">
-          Ver no instagram
-          <i class="ph ph-instagram-logo"></i>
-        </a>
-      </div>
-    </nav>
-    <div class="overlay" onclick="toggleNavbar()">
-      <p class="sr-only">Clique para fechar o menu de navegação</p>
-    </div>
-  </header>
-
-  <main>
-    <button onclick="scrollToTop()" id="scroll-to-top" title="Topo da página">
-      <img src="./assets/icons/ArrowUp.svg" alt="" />
-    </button>
-
-    <!-- HERO SECTION -->
-    <section id="home">
-      <div>
-        <img src="./assets/images/hero-bg.svg" class="hero-bg" />
-        <div class="instagram-balloon">
-          <span>@taisgoncalves_consultoria</span>
-        </div>
-        <div class="title-container">
-          <h1 class="title">TG Consultoria.</h1>
-          <p>Garanta integridade e reputação para sua empresa.</p>
-        </div>
-
-        <div class="cards-container">
-          <div class="card">
-            <img src="./assets/icons/Building.svg" alt="" />
-            <h4>Assessoria</h4>
-            <p>para empresas.</p>
-          </div>
-          <div class="card-dark card">
-            <img src="./assets/icons/Checks.svg" alt="" />
-            <h4>De contratos</h4>
-            <p>para resultados.</p>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <a href="#home">
+              Ínicio
+              <img src="./assets/icons/House.svg" alt="" />
+            </a>
+          </li>
+          <div class="separator"></div>
+          <li>
+            <a href="#about">
+              Sobre
+              <img src="./assets/icons/UsersThree.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#steps">
+              Etapas
+              <img src="./assets/icons/BookOpenText.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#services">
+              Serviços
+              <img src="./assets/icons/Package.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#Contato">
+              Contato
+              <img src="./assets/icons/Phone.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="separator"></div>
 
         <div class="buttons">
-          <a target="_blank" href="https://wa.me/557981391354" class="btn whatsapp-btn">
-            Agende sua consultoria
-            <img src="./assets/icons/whatsapp.svg" alt="" />
+          <a
+            target="_blank"
+            href="https://wa.me/557981391354"
+            class="btn outline-btn"
+          >
+            Entrar em contato
+            <i class="ph ph-whatsapp-logo"></i>
           </a>
-          <a target="_blank" href="https://www.instagram.com/taisgoncalves_consultoria" class="btn outline-btn">
-            Conheça nosso trabalho
+          <a
+            target="_blank"
+            href="https://instagram.com/taisgoncalves_consultoria"
+            class="btn outline-btn"
+          >
+            Ver no instagram
             <i class="ph ph-instagram-logo"></i>
           </a>
         </div>
+      </nav>
+      <div class="overlay" onclick="toggleNavbar()">
+        <p class="sr-only">Clique para fechar o menu de navegação</p>
       </div>
+    </header>
 
+    <main>
+      <button onclick="scrollToTop()" id="scroll-to-top" title="Topo da página">
+        <img src="./assets/icons/ArrowUp.svg" alt="" />
+      </button>
 
-      <div class="tais-img">
-        <img src="./assets/images/tais-goncalves.svg" alt="" />
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <div>
-        <h2 class="title">Sobre a <br />Consultoria</h2>
-        <p>Conheça mais sobre nosso trabalho.</p>
-      </div>
-
-      <div class="obs">
-        <p>
-          oferecemos
-          <span style="font-weight: 500">assessoria especializada</span> para
-          empresas públicas e privadas.
-        </p>
-      </div>
-
-      <div>
-        <details open>
-          <summary>
-            Nosso foco
-            <img src="./assets/icons/seta.svg" class="arrow" alt="" />
-          </summary>
-          <p>
-            foco em ESG & Sustentabilidade e gestão <br />
-            estratégica de contratos.
-          </p>
-        </details>
-        <details open>
-          <summary>
-            Compromisso
-            <img src="./assets/icons/seta.svg" class="arrow" alt="" />
-          </summary>
-          <p>
-            Transformar desafios em oportunidades; <br />
-            com clareza, responsabilidade e resultados.
-          </p>
-        </details>
-      </div>
-
-      <h3 class="cards-container-title">Benefícios para sua empresa:</h3>
-      <div class="cards-container">
-
-        <article>
+      <!-- HERO SECTION -->
+      <section id="home">
+        <div>
           <div>
-            <h4>
-              <div>
-                <img src="./assets/icons/gear-bold.svg" alt="" />
+            <img src="./assets/images/hero-bg.svg" class="hero-bg" />
+            <div class="instagram-balloon">
+              <span>@taisgoncalves_consultoria</span>
+            </div>
+            <div class="title-container">
+              <h1 class="title">
+                Conheça a <br />
+                TG Consultoria.
+              </h1>
+              <p>Garanta integridade e reputação para sua empresa.</p>
+            </div>
+
+            <div class="cards-container">
+              <div class="card">
+                <img src="./assets/icons/Building.svg" alt="" />
+                <h4>Assessoria</h4>
+                <p>para empresas.</p>
               </div>
-              Eficiência:
-            </h4>
+              <div class="card-dark card">
+                <img src="./assets/icons/Checks.svg" alt="" />
+                <h4>De contratos</h4>
+                <p>para resultados.</p>
+              </div>
+            </div>
 
-            <p>
-              otimização de processos contratuais que reduzem riscos e custos.
-            </p>
+            <div class="buttons">
+              <a
+                target="_blank"
+                href="https://wa.me/557981391354"
+                class="btn whatsapp-btn"
+              >
+                Agende sua consultoria
+                <img src="./assets/icons/whatsapp.svg" alt="" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/taisgoncalves_consultoria"
+                class="btn outline-btn"
+              >
+                Conheça nosso trabalho
+                <i class="ph ph-instagram-logo"></i>
+              </a>
+            </div>
           </div>
-        </article>
 
-        <article>
+          <div class="tais-img">
+            <img src="./assets/images/tais-goncalves.svg" alt="" />
+          </div>
+
+          <div class="tais-img-md">
+            <img src="./assets/images/tais-goncalves-md.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about">
+        <div class="top-container">
           <div>
-            <h4>
-              <div>
-                <img src="./assets/icons/Feather.svg" alt="" />
-              </div>
-              Sustentabilidade:
-            </h4>
+            <div>
+              <h2 class="title">Sobre a <br />Consultoria</h2>
+              <p>Conheça mais sobre nosso trabalho.</p>
+            </div>
 
-            <p>
-              Práticas ESG que fortalecem sua imagem e geram impacto positivo.
-            </p>
+            <div class="obs">
+              <p>
+                oferecemos
+                <span style="font-weight: 500">assessoria especializada</span>
+                para empresas públicas e privadas.
+              </p>
+            </div>
           </div>
-        </article>
-
-        <article>
           <div>
-            <h4>
+            <details open>
+              <summary>
+                Nosso foco
+                <img src="./assets/icons/seta.svg" class="arrow" alt="" />
+              </summary>
+              <p>
+                foco em ESG & Sustentabilidade e gestão <br />
+                estratégica de contratos.
+              </p>
+            </details>
+            <details open>
+              <summary>
+                Compromisso
+                <img src="./assets/icons/seta.svg" class="arrow" alt="" />
+              </summary>
+              <p>
+                Transformar desafios em oportunidades; <br />
+                com clareza, responsabilidade e resultados.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <h3 class="cards-container-title">Benefícios para sua empresa:</h3>
+        <div class="cards-container">
+          <article>
+            <div>
+              <h4>
+                <div>
+                  <img src="./assets/icons/gear-bold.svg" alt="" />
+                </div>
+                Eficiência:
+              </h4>
+
+              <p>
+                otimização de processos contratuais que reduzem riscos e custos.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <div>
+              <h4>
+                <div>
+                  <img src="./assets/icons/Feather.svg" alt="" />
+                </div>
+                Sustentabilidade:
+              </h4>
+
+              <p>
+                Práticas ESG que fortalecem sua imagem e geram impacto positivo.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <div>
+              <h4>
+                <div>
+                  <img src="./assets/icons/ShieldCheck.svg" alt="" />
+                </div>
+                Segurança:
+              </h4>
+
+              <p>
+                Foco no desempenho e no retorno direto para sua organização.
+              </p>
+            </div>
+          </article>
+
+          <div class="contact-links">
+            <a target="_blank" href="https://wa.me/557981391354">
+              <img src="./assets/icons/whatsapp-fill.svg" alt="" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/taisgoncalves_consultoria"
+            >
+              <img src="./assets/icons/instagram-fill.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEPS SECTION -->
+      <section id="steps">
+        <img class="steps-image" src="./assets/images/steps.svg" alt="" />
+
+        <div>
+          <h2 class="title">Nosso processo</h2>
+          <p>Como trabalharemos.</p>
+        </div>
+        <div class="steps-container">
+          <div class="line"></div>
+          <div class="line-end"></div>
+          <div class="step">
+            <h4>Diagnóstico inicial:</h4>
+            <ul>
+              <li>• Análise do cenário da empresa;</li>
+              <li>• Identificamos necessidades;</li>
+              <li>• Identicamos oportunidades.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>Estratégia personalizada:</h4>
+            <ul>
+              <li>• Planos alinhados aos seus objetivos.</li>
+              <li>• Integramos práticas com foco em resultados.</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>Implementação prática:</h4>
+            <ul>
+              <li>• Execução das estratégias definidas.</li>
+              <li>
+                • Ajustamos processos e contratos para garantir eficiência.
+              </li>
+            </ul>
+          </div>
+          <div class="step">
+            <h4>Monitoramento e acompanhamento:</h4>
+            <ul>
+              <li>• Entregamos relatórios claros.</li>
+              <li>• Avaliamos indicadores de desempenho e impacto.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services">
+        <div>
+          <h1 class="title">
+            Nossos <br />
+            Serviços
+          </h1>
+        </div>
+
+        <div class="cards-container">
+          <div class="dark-card card">
+            <h4>Atendemos:</h4>
+            <p>Empresas públicas e privadas.</p>
+            <div class="icons">
               <div>
-                <img src="./assets/icons/ShieldCheck.svg" alt="" />
+                <i class="ph-bold ph-plugs"></i>
               </div>
-              Segurança:
-            </h4>
-
-            <p>
-              Foco no desempenho e no retorno direto para sua organização.
-            </p>
-          </div>
-        </article>
-
-        <div class="contact-links">
-          <a target="_blank" href="https://wa.me/557981391354">
-            <img src="./assets/icons/whatsapp-fill.svg" alt="" />
-          </a>
-          <a target="_blank" href="https://www.instagram.com/taisgoncalves_consultoria">
-            <img src="./assets/icons/instagram-fill.svg" alt="" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- STEPS SECTION -->
-    <section id="steps">
-      <img class="steps-image" src="./assets/images/steps.svg" alt="" />
-
-      <div>
-        <h2 class="title">Nosso processo</h2>
-        <p>Como trabalharemos.</p>
-      </div>
-      <div class="steps-container">
-        <div class="line"></div>
-        <div class="line-end"></div>
-        <div class="step">
-          <h4>Diagnóstico inicial:</h4>
-          <ul>
-            <li>• Análise do cenário da empresa;</li>
-            <li>• Identificamos necessidades;</li>
-            <li>• Identicamos oportunidades.</li>
-          </ul>
-        </div>
-        <div class="step">
-          <h4>Estratégia personalizada:</h4>
-          <ul>
-            <li>• Planos alinhados aos seus objetivos.</li>
-            <li>• Integramos práticas com foco em resultados.</li>
-          </ul>
-        </div>
-        <div class="step">
-          <h4>Implementação prática:</h4>
-          <ul>
-            <li>• Execução das estratégias definidas.</li>
-            <li>
-              • Ajustamos processos e contratos para garantir eficiência.
-            </li>
-          </ul>
-        </div>
-        <div class="step">
-          <h4>Monitoramento e acompanhamento:</h4>
-          <ul>
-            <li>• Entregamos relatórios claros.</li>
-            <li>• Avaliamos indicadores de desempenho e impacto.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services">
-      <div>
-        <h1 class="title">
-          Nossos <br />
-          Serviços
-        </h1>
-      </div>
-
-      <div class="cards-container">
-        <div class="dark-card card">
-          <h4>Atendemos:</h4>
-          <p>Empresas públicas e privadas.</p>
-          <div class="icons">
-            <div>
-              <i class="ph-bold ph-plugs"></i>
+              <div>
+                <i class="ph-bold ph-building"></i>
+              </div>
             </div>
-            <div>
-              <i class="ph-bold ph-building"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="beige-card card">
-          <h4>Assessoria para:</h4>
-          <p>Contratos e licitações.</p>
-          <div class="icons">
-            <div>
-              <i class="ph-bold ph-currency-circle-dollar"></i>
-            </div>
-            <div>
-              <i class="ph-bold ph-file"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="dark-card card">
-          <h4>Mapeamento:</h4>
-          <p>de Gestão de risco.</p>
-        </div>
-
-        <div class="outline-card card">
-          <h4>Gestão Contratual</h4>
-          <div class="icons">
-            <div>
-              <i class="ph-bold ph-handshake"></i>
-            </div>
-            <div>
-              <i class="ph-bold ph-file"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="dark-card card">
-          <h4>Elaboração:</h4>
-          <p>de Gestão de pleitos (Claims).</p>
-        </div>
-
-        <div class="outline-card card">
-          <h4>Cobranças (medições)</h4>
-          <div class="icons">
-            <div>
-              <i class="ph-bold ph-arrow-circle-up-left"></i>
-            </div>
-            <div>
-              <i class="ph-bold ph-scroll"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="long-cards card">
-          <div class="outline-card card">
-            <h4>
-              Trabalhamos com:
-              <i class="ph-bold ph-cards-three"></i>
-            </h4>
-            <p>Negociação; Conciliação & Mediação de conflitos.</p>
           </div>
 
           <div class="beige-card card">
-            <h4>
-              Adequação contratual:
-              <i class="ph-bold ph-info"></i>
-            </h4>
-            <p>Para novas leis e normas.</p>
+            <h4>Assessoria para:</h4>
+            <p>Contratos e licitações.</p>
+            <div class="icons">
+              <div>
+                <i class="ph-bold ph-currency-circle-dollar"></i>
+              </div>
+              <div>
+                <i class="ph-bold ph-file"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-card card">
+            <h4>Mapeamento:</h4>
+            <p>de Gestão de risco.</p>
+          </div>
+
+          <div class="outline-card card">
+            <h4>Gestão Contratual</h4>
+            <div class="icons">
+              <div>
+                <i class="ph-bold ph-handshake"></i>
+              </div>
+              <div>
+                <i class="ph-bold ph-file"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-card card">
+            <h4>Elaboração:</h4>
+            <p>de Gestão de pleitos (Claims).</p>
+          </div>
+
+          <div class="outline-card card">
+            <h4>Cobranças (medições)</h4>
+            <div class="icons">
+              <div>
+                <i class="ph-bold ph-arrow-circle-up-left"></i>
+              </div>
+              <div>
+                <i class="ph-bold ph-scroll"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="long-cards card">
+            <div class="outline-card card">
+              <h4>
+                Trabalhamos com:
+                <i class="ph-bold ph-cards-three"></i>
+              </h4>
+              <p>Negociação; Conciliação & Mediação de conflitos.</p>
+            </div>
+
+            <div class="beige-card card">
+              <h4>
+                Adequação contratual:
+                <i class="ph-bold ph-info"></i>
+              </h4>
+              <p>Para novas leis e normas.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
-  <script src="./assets/js/scripts.js"></script>
-</body>
-
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
 </html>
