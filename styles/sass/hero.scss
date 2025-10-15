@@ -1,0 +1,18 @@
+#hero {
+    margin-top: 4.5rem;
+    padding-inline: 2rem;
+
+    .buttons {
+        margin-top: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.75rem;
+    }
+
+    .tais img {
+        margin-top: 3rem;
+        width: 100%;
+    }
+}

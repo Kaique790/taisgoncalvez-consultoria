@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background: #09221F;
+  background: #09221f;
 }
 header > div {
   display: flex;
@@ -9,14 +9,14 @@ header > div {
   justify-content: space-between;
 }
 header i {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.25rem;
 }
 header #mobile-navbar {
   position: fixed;
   pointer-events: none;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   right: 0;
   bottom: -100%;
   transition: bottom 0.3s;
@@ -46,7 +46,7 @@ header #mobile-navbar .top .logo {
   width: 42px;
 }
 header #mobile-navbar i {
-  color: #09221F;
+  color: #09221f;
   font-size: 1.35rem;
 }
 header .separator {
@@ -62,7 +62,7 @@ header ul {
   gap: 1rem;
 }
 header ul i {
-  background: #D9BF9E;
+  background: #d9bf9e;
   padding: 0.6rem;
   border-radius: 100%;
   display: flex;
@@ -71,7 +71,7 @@ header li a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #09221F;
+  color: #09221f;
   position: relative;
 }
 header li a::after {
@@ -83,21 +83,21 @@ header li a::after {
   top: 0;
   left: 10px;
   border-radius: 1.1rem;
-  background-color: #D9BF9E;
+  background-color: #d9bf9e;
   transition: all 0.3s;
 }
 header li a:hover::after {
   width: 150px;
 }
 header .buttons {
-  margin-top: 1.75rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: 400px;
   max-width: 100%;
-  margin: 0 auto;
-  margin-top: 2rem;
 }
 header .close-navbar {
   max-width: 32px;
@@ -105,7 +105,7 @@ header .close-navbar {
   margin-block: 2rem 0;
   display: block;
   font-size: 2rem;
-  border: 1px solid #09221F;
+  border: 1px solid #09221f;
   border-radius: 100%;
   display: flex;
   padding: 0.25rem;
@@ -113,7 +113,22 @@ header .close-navbar {
 }
 header .close-navbar:hover {
   border-color: transparent;
-  background: #BD9B6D;
+  background: #bd9b6d;
+}
+
+#hero {
+  margin-top: 4.5rem;
+  padding-inline: 2rem;
+}
+#hero .buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+#hero .tais img {
+  margin-top: 3rem;
+  width: 100%;
 }
 
 * {
@@ -124,10 +139,18 @@ header .close-navbar:hover {
 
 body,
 html {
-  background-color: #E9E9E9;
-  color: #09221F;
+  background-color: #e9e9e9;
+  color: #09221f;
   font-size: 1rem;
   font-family: "poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }
 
 ul {
@@ -164,18 +187,37 @@ button {
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  color: #09221F;
+  color: #09221f;
 }
 
 .outline-btn {
-  border: 1px solid #09221F;
+  border: 1px solid #09221f;
   border-radius: 0.5rem;
 }
 
 .separator {
   width: 100%;
   height: 1px;
-  background-color: #09221F;
+  background-color: #09221f;
+}
+
+.title {
+  text-align: center;
+}
+.title h1,
+.title h2,
+.title h3 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+.title h1 span,
+.title h2 span,
+.title h3 span {
+  color: #bd9b6d;
+}
+.title p {
+  margin-top: 0.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */
