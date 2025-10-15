@@ -1,5 +1,165 @@
 @use "variables" as *;
 
-body {
-    background-color: $color-bg;
+header {
+    width: 100%;
+    background: $color-green-dark;
+
+    &>div {
+        display: flex;
+        padding: 0.75rem 1rem;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    i {
+        color: $color-white;
+        font-size: 1.25rem;
+    }
+
+    #mobile-navbar {
+        position: fixed;
+        pointer-events: none;
+
+        width: 100%;
+
+        background-color: $color-white;
+
+        right: 0;
+        bottom: -100%;
+
+        transition: bottom 0.3s;
+        padding: 1.5rem 0;
+
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+
+        box-shadow: -2px 0px 6px #00000017;
+    }
+
+    #mobile-navbar.active {
+        pointer-events: all;
+        bottom: 0;
+    }
+
+    #mobile-navbar .top {
+        display: flex;
+
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+            font-family: "Abril Fatface", serif;
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    #mobile-navbar .top .logo {
+        width: 42px;
+    }
+
+    #mobile-navbar i {
+        color: $color-green-dark;
+        font-size: 1.35rem;
+    }
+
+    .separator {
+        margin-block: 1.75rem;
+        opacity: 0.14;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        max-width: fit-content;
+
+        margin: 0 auto;
+
+        gap: 1rem;
+    }
+
+    ul i {
+        background: $color-beige-light;
+        padding: 0.60rem;
+
+        border-radius: 100%;
+        display: flex;
+    }
+
+    li a {
+        display: flex;
+        align-items: center;
+
+        gap: 0.5rem;
+
+        color: $color-green-dark;
+        position: relative;
+    }
+
+    li a::after {
+        content: " ";
+
+        width: 0px;
+        height: 100%;
+
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        left: 10px;
+
+        border-radius: 1.1rem;
+
+        background-color: $color-beige-light;
+        transition: all .3s;
+    }
+
+    li a:hover::after {
+        width: 150px;
+    }
+
+    .buttons {
+        margin-top: 1.75rem;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.5rem;
+
+        width: 400px;
+        max-width: 100%;
+
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    .close-navbar {
+        max-width: 32px;
+
+        margin-inline: auto;
+        margin-block: 2rem 0;
+
+        display: block;
+        font-size: 2rem;
+
+        border: 1px solid $color-green-dark;
+        border-radius: 100%;
+
+        display: flex;
+        padding: 0.25rem;
+
+        transition: all .3s;
+    }
+
+    .close-navbar:hover {
+        border-color: transparent;
+        background: $color-beige;
+    }
 }
