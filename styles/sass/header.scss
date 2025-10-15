@@ -10,6 +10,8 @@ header {
 
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
   }
 
   i {
@@ -24,6 +26,7 @@ header {
     width: 100%;
 
     background-color: $color-white;
+    z-index: 10;
 
     right: 0;
     bottom: -100%;
@@ -35,6 +38,26 @@ header {
     border-top-right-radius: 2rem;
 
     box-shadow: -2px 0px 6px #00000017;
+  }
+
+  #mobile-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    background: #24242418;
+    backdrop-filter: blur(6px);
+  }
+
+  #mobile-overlay.active {
+    opacity: 100;
+    pointer-events: all;
   }
 
   #mobile-navbar.active {
@@ -137,6 +160,11 @@ header {
 
     width: 400px;
     max-width: 100%;
+
+    a:hover #i-i,
+    a:hover #w-i {
+      color: $color-white;
+    }
   }
 
   .close-navbar {

@@ -96,12 +96,16 @@
 
             <div class="buttons">
               <a class="btn outline-btn" href="">
-                Entrar em contato
-                <i class="ph ph-whatsapp-logo"></i>
+                <span>
+                  Entrar em contato
+                  <i id="w-i" class="ph ph-whatsapp-logo"></i>
+                </span>
               </a>
               <a class="btn outline-btn" href="">
-                Ver no instagram
-                <i class="ph ph-instagram-logo"></i>
+                <span>
+                  Ver no instagram
+                  <i id="i-i" class="ph ph-instagram-logo"></i>
+                </span>
               </a>
             </div>
 
@@ -109,6 +113,9 @@
               <i class="ph-bold ph-x"></i>
             </button>
           </nav>
+          <div onclick="toggleNavbar()" id="mobile-overlay">
+            <p class="sr-only">Clique para fechar o menu de navegação</p>
+          </div>
         </div>
       </div>
     </header>
@@ -126,7 +133,9 @@
 
           <div class="buttons">
             <a href="" class="btn"> Fale com uma profissional </a>
-            <a href="" class="btn outline-btn"> Fale com uma profissional </a>
+            <a href="" class="btn outline-btn">
+              <span>Fale com uma profissional</span>
+            </a>
           </div>
         </div>
 

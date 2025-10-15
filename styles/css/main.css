@@ -7,6 +7,7 @@ header > div {
   padding: 0.75rem 1rem;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 header i {
   color: #ffffff;
@@ -17,6 +18,7 @@ header #mobile-navbar {
   pointer-events: none;
   width: 100%;
   background-color: #ffffff;
+  z-index: 10;
   right: 0;
   bottom: -100%;
   transition: bottom 0.3s;
@@ -24,6 +26,21 @@ header #mobile-navbar {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.0901960784);
+}
+header #mobile-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(36, 36, 36, 0.0941176471);
+  backdrop-filter: blur(6px);
+}
+header #mobile-overlay.active {
+  opacity: 100;
+  pointer-events: all;
 }
 header #mobile-navbar.active {
   pointer-events: all;
@@ -98,6 +115,10 @@ header .buttons {
   gap: 0.5rem;
   width: 400px;
   max-width: 100%;
+}
+header .buttons a:hover #i-i,
+header .buttons a:hover #w-i {
+  color: #ffffff;
 }
 header .close-navbar {
   max-width: 32px;
@@ -193,6 +214,36 @@ button {
 .outline-btn {
   border: 1px solid #09221f;
   border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.outline-btn::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background: #09221f;
+  transition: all 0.6s;
+}
+.outline-btn span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+.outline-btn span,
+.outline-btn i {
+  transition: all 0.8s;
+}
+.outline-btn:hover {
+  color: #e9e9e9;
+}
+.outline-btn:hover::after {
+  width: 100%;
 }
 
 .separator {
