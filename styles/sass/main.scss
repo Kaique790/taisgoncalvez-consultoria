@@ -54,21 +54,26 @@ button {
 }
 
 .btn {
-  padding: 0.25rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
 
   color: $color-green-dark;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+
+  i {
+    font-size: 1.15rem;
+  }
 }
 
 .outline-btn {
   border: 1px solid $color-green-dark;
-  border-radius: 0.5rem;
 
   position: relative;
-  overflow: hidden;
 
   &::after {
     content: " ";
@@ -105,6 +110,14 @@ button {
 
   &:hover::after {
     width: 100%;
+  }
+}
+
+.whatsapp-btn {
+  background: $color-green;
+
+  &:hover {
+    background-color: $color-green-2;
   }
 }
 

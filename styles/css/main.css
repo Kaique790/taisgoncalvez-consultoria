@@ -35,6 +35,7 @@ header #mobile-overlay {
   left: 0;
   opacity: 0;
   pointer-events: none;
+  z-index: 2;
   background: rgba(36, 36, 36, 0.0941176471);
   backdrop-filter: blur(6px);
 }
@@ -140,16 +141,29 @@ header .close-navbar:hover {
 #hero {
   margin-top: 4.5rem;
   padding-inline: 2rem;
+  position: relative;
 }
 #hero .buttons {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  font-size: 0.875rem;
 }
 #hero .tais img {
   margin-top: 3rem;
   width: 100%;
+}
+#hero .tg-decorator {
+  position: absolute;
+  opacity: 0.05;
+  left: -40px;
+  top: -30px;
+  width: 70%;
+}
+#hero > div {
+  position: relative;
+  z-index: 1;
 }
 
 * {
@@ -203,19 +217,23 @@ button {
 }
 
 .btn {
-  padding: 0.25rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
   color: #09221f;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.btn i {
+  font-size: 1.15rem;
 }
 
 .outline-btn {
   border: 1px solid #09221f;
-  border-radius: 0.5rem;
   position: relative;
-  overflow: hidden;
 }
 .outline-btn::after {
   content: " ";
@@ -244,6 +262,13 @@ button {
 }
 .outline-btn:hover::after {
   width: 100%;
+}
+
+.whatsapp-btn {
+  background: #00c248;
+}
+.whatsapp-btn:hover {
+  background-color: #00af40;
 }
 
 .separator {

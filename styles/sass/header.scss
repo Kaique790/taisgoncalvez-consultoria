@@ -50,6 +50,7 @@ header {
 
     opacity: 0;
     pointer-events: none;
+    z-index: 2;
 
     background: #24242418;
     backdrop-filter: blur(6px);

@@ -1,18 +1,34 @@
 #hero {
-    margin-top: 4.5rem;
-    padding-inline: 2rem;
+  margin-top: 4.5rem;
+  padding-inline: 2rem;
+  position: relative;
 
-    .buttons {
-        margin-top: 1.5rem;
+  .buttons {
+    margin-top: 1.5rem;
 
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-        gap: 0.75rem;
-    }
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
 
-    .tais img {
-        margin-top: 3rem;
-        width: 100%;
-    }
+  .tais img {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .tg-decorator {
+    position: absolute;
+    opacity: 0.05;
+
+    left: -40px;
+    top: -30px;
+    width: 70%;
+  }
+
+  & > div {
+    position: relative;
+    z-index: 1;
+  }
 }
