@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-header {
+body > header {
   width: 100%;
   background: $color-green-dark;
 

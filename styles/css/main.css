@@ -1,19 +1,19 @@
-header {
+body > header {
   width: 100%;
   background: #09221f;
 }
-header > div {
+body > header > div {
   display: flex;
   padding: 0.75rem 1rem;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-header i {
+body > header i {
   color: #ffffff;
   font-size: 1.25rem;
 }
-header #mobile-navbar {
+body > header #mobile-navbar {
   position: fixed;
   pointer-events: none;
   width: 100%;
@@ -27,7 +27,7 @@ header #mobile-navbar {
   border-top-right-radius: 2rem;
   box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.0901960784);
 }
-header #mobile-overlay {
+body > header #mobile-overlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -39,39 +39,39 @@ header #mobile-overlay {
   background: rgba(36, 36, 36, 0.0941176471);
   backdrop-filter: blur(6px);
 }
-header #mobile-overlay.active {
+body > header #mobile-overlay.active {
   opacity: 100;
   pointer-events: all;
 }
-header #mobile-navbar.active {
+body > header #mobile-navbar.active {
   pointer-events: all;
   bottom: 0;
 }
-header #mobile-navbar .top {
+body > header #mobile-navbar .top {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
 }
-header #mobile-navbar .top h4 {
+body > header #mobile-navbar .top h4 {
   font-family: "Abril Fatface", serif;
   font-size: 1.25rem;
 }
-header #mobile-navbar .top p {
+body > header #mobile-navbar .top p {
   font-size: 0.875rem;
 }
-header #mobile-navbar .top .logo {
+body > header #mobile-navbar .top .logo {
   width: 42px;
 }
-header #mobile-navbar i {
+body > header #mobile-navbar i {
   color: #09221f;
   font-size: 1.35rem;
 }
-header .separator {
+body > header .separator {
   margin-block: 1.75rem;
   opacity: 0.14;
 }
-header ul {
+body > header ul {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -79,20 +79,20 @@ header ul {
   margin: 0 auto;
   gap: 1rem;
 }
-header ul i {
+body > header ul i {
   background: #d9bf9e;
   padding: 0.6rem;
   border-radius: 100%;
   display: flex;
 }
-header li a {
+body > header li a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: #09221f;
   position: relative;
 }
-header li a::after {
+body > header li a::after {
   content: " ";
   width: 0px;
   height: 100%;
@@ -104,10 +104,10 @@ header li a::after {
   background-color: #d9bf9e;
   transition: all 0.3s;
 }
-header li a:hover::after {
+body > header li a:hover::after {
   width: 150px;
 }
-header .buttons {
+body > header .buttons {
   padding: 0 2rem;
   margin: 0 auto;
   margin-top: 2rem;
@@ -117,11 +117,11 @@ header .buttons {
   width: 400px;
   max-width: 100%;
 }
-header .buttons a:hover #i-i,
-header .buttons a:hover #w-i {
+body > header .buttons a:hover #i-i,
+body > header .buttons a:hover #w-i {
   color: #ffffff;
 }
-header .close-navbar {
+body > header .close-navbar {
   max-width: 32px;
   margin-inline: auto;
   margin-block: 2rem 0;
@@ -133,7 +133,7 @@ header .close-navbar {
   padding: 0.25rem;
   transition: all 0.3s;
 }
-header .close-navbar:hover {
+body > header .close-navbar:hover {
   border-color: transparent;
   background: #bd9b6d;
 }
@@ -159,11 +159,76 @@ header .close-navbar:hover {
   opacity: 0.05;
   left: -40px;
   top: -30px;
-  width: 70%;
+  width: 400px;
 }
 #hero > div {
   position: relative;
   z-index: 1;
+}
+
+#hero .cards {
+  position: relative;
+  margin-top: 2rem;
+}
+#hero .cards .cards-decorator {
+  position: absolute;
+  top: 450px;
+  opacity: 0.25;
+}
+#hero .cards .card:not(:nth-child(2)) {
+  margin-top: 3.625rem;
+}
+#hero .cards .card:nth-child(3) {
+  margin-left: auto;
+}
+#hero .cards .card:last-child {
+  margin-inline: auto;
+}
+#hero .cards .card {
+  border: 1px solid #09221f;
+  border-radius: 0.5rem;
+  background: #fbfbfb;
+  padding: 1.125rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 330px;
+  width: 270px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1215686275);
+}
+#hero .cards .card header span {
+  padding: 0.25rem 0.5rem;
+  background: #09221f;
+  color: #ffffff;
+  max-width: fit-content;
+  height: fit-content;
+  display: flex;
+  font-size: 0.75rem;
+  border-radius: 100rem;
+}
+#hero .cards .card header h4 {
+  margin-top: 0.25rem;
+  line-height: 150%;
+}
+#hero .cards .card.outline {
+  background: none;
+}
+#hero .cards .card:last-child {
+  position: relative;
+}
+#hero .cards .card:last-child span {
+  color: #00c248;
+}
+#hero .cards .card:last-child:after {
+  content: " ";
+  border-radius: 0.375rem;
+  position: absolute;
+  right: -16px;
+  bottom: 20px;
+  height: 34px;
+  width: 73px;
+  background: #09221f;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2666666667);
 }
 
 * {
