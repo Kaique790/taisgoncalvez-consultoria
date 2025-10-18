@@ -116,6 +116,12 @@
 
   .card:last-child {
     margin-inline: auto;
+
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../../assets/images/bg-card-2.svg");
   }
 
   .card {
@@ -134,6 +140,15 @@
 
     box-shadow: 0px 6px 8px #0000001f;
     transition: all 0.3s;
+
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../../assets/images/bg-card-1.svg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .card:hover {

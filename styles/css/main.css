@@ -255,6 +255,7 @@ body > header .close-navbar:hover {
 }
 #hero .cards .card:last-child {
   margin-inline: auto;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/bg-card-2.svg");
 }
 #hero .cards .card {
   border: 1px solid #09221f;
@@ -268,6 +269,10 @@ body > header .close-navbar:hover {
   width: 270px;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1215686275);
   transition: all 0.3s;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/bg-card-1.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #hero .cards .card:hover {
   transform: scale(101%);
