@@ -564,7 +564,7 @@ body > header .close-navbar:hover {
   border-radius: 0.5rem;
   height: 7rem;
 }
-@media (width >= 1024px) {
+@media (width >= 768px) {
   #tais-skills .skills p {
     height: auto;
   }
@@ -627,7 +627,7 @@ body > header .close-navbar:hover {
   border-radius: 0.5rem;
   font-size: 4rem;
 }
-@media (width >= 1024px) {
+@media (width >= 768px) {
   #tais-skills .skills div {
     font-size: 3rem;
   }
