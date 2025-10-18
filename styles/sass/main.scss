@@ -97,6 +97,15 @@ button {
   }
 }
 
+.btn-dark {
+  background-color: $color-green-dark;
+  color: $color-white;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
 .outline-btn {
   border: 1px solid $color-green-dark;
 

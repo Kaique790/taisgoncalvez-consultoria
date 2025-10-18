@@ -529,6 +529,168 @@ body > header .close-navbar:hover {
   font-size: 0.875rem;
 }
 
+#tais-skills {
+  margin-top: 3rem;
+}
+#tais-skills .img {
+  padding: 1.25rem;
+  background: #09221f;
+  border-radius: 0.5rem;
+  display: flex;
+}
+@media (width >= 1024px) {
+  #tais-skills .img {
+    grid-row: span 2;
+  }
+}
+#tais-skills .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+#tais-skills .skills {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+#tais-skills .skills p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #09221f;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  height: 7rem;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills p {
+    height: auto;
+  }
+}
+#tais-skills .skills p.outline {
+  background: none;
+  border: 1px solid #09221f;
+  color: #09221f;
+}
+#tais-skills .skills p.k1 {
+  grid-column: span 2;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills p.k1 {
+    grid-column: 1;
+  }
+}
+#tais-skills .skills p.k3 {
+  grid-column: span 3;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills p.k3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+#tais-skills .skills p.k4 {
+  grid-column: span 3;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills p.k4 {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+}
+@media (width >= 1024px) {
+  #tais-skills .skills .k5 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+#tais-skills .skills p.k6 {
+  grid-column: span 2;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills p.k6 {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+}
+#tais-skills .skills p.k7 {
+  grid-column: span 3;
+}
+#tais-skills .skills div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #09221f;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-size: 4rem;
+}
+@media (width >= 1024px) {
+  #tais-skills .skills div {
+    font-size: 3rem;
+  }
+}
+#tais-skills .skills .beige {
+  background: #d9bf9e;
+  border: 1px solid #bd9b6d;
+  color: #09221f;
+}
+@media (width >= 768px) {
+  #tais-skills .skills {
+    margin-top: 0;
+    grid-template-rows: 74px 74px 74px;
+  }
+}
+@media (width >= 1024px) {
+  #tais-skills .skills {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (width >= 768px) {
+  #tais-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 3rem;
+    row-gap: 1.25rem;
+  }
+}
+
+#tais-skills > article {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+#tais-skills > article h4 {
+  font-size: 2rem;
+}
+#tais-skills > article .obs {
+  border-left: 4px solid #d9bf9e;
+  padding-left: 1rem;
+}
+#tais-skills > article .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media (width >= 768px) {
+  #tais-skills > article {
+    grid-column: span 2;
+    margin-top: 0;
+  }
+}
+@media (width >= 1024px) {
+  #tais-skills > article {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -616,6 +778,14 @@ button {
   background-color: #d9bf9e;
 }
 .btn-primary:hover {
+  filter: brightness(90%);
+}
+
+.btn-dark {
+  background-color: #09221f;
+  color: #ffffff;
+}
+.btn-dark:hover {
   filter: brightness(90%);
 }
 
