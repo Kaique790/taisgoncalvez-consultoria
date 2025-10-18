@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+#about {
+  margin-top: 8.125rem;
+  padding: 0 2rem;
+
+  .title {
+    text-align: left;
+  }
+
+  .topics-container {
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.8125rem;
+
+    .topic {
+      i {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        display: flex;
+        font-size: $text-md;
+        gap: 0.75rem;
+
+        align-items: center;
+      }
+
+      p {
+        margin-top: 0.5rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topic:last-child h3 {
+      color: $color-beige;
+    }
+
+    .separator {
+      opacity: 0.2;
+      width: 80%;
+    }
+  }
+}

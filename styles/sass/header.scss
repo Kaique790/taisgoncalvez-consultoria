@@ -6,17 +6,28 @@ body > header {
 
   & > div {
     display: flex;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 2rem;
 
     align-items: center;
     justify-content: space-between;
 
     position: relative;
+
+    max-width: 1064px;
+    width: 100%;
+
+    margin: 0 auto;
   }
 
   i {
     color: $color-white;
     font-size: 1.25rem;
+  }
+
+  .mobile-menu {
+    @media (width >= 748px) {
+      display: none;
+    }
   }
 
   #mobile-navbar {
@@ -38,6 +49,10 @@ body > header {
     border-top-right-radius: 2rem;
 
     box-shadow: -2px 0px 6px #00000017;
+
+    @media (width >= 748px) {
+      display: none;
+    }
   }
 
   #mobile-overlay {
@@ -54,6 +69,10 @@ body > header {
 
     background: #24242418;
     backdrop-filter: blur(6px);
+
+    @media (width >= 748px) {
+      display: none;
+    }
   }
 
   #mobile-overlay.active {
