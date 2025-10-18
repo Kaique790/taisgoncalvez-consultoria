@@ -25,7 +25,7 @@
     width: 100%;
 
     @media (width <= 1024px) {
-      max-width: 620px;
+      max-width: 520px;
       margin-inline: auto;
 
       display: block;
@@ -42,9 +42,9 @@
     position: absolute;
     opacity: 0.03;
 
-    left: -40px;
-    top: -30px;
-    width: 400px;
+    left: -80px;
+    top: 10px;
+    width: 530px;
 
     @media (width >= 1024px) {
       width: 930px;
@@ -133,6 +133,12 @@
     width: 270px;
 
     box-shadow: 0px 6px 8px #0000001f;
+    transition: all 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(101%);
+    rotate: 1deg;
   }
 
   .card header span {

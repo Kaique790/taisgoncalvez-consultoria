@@ -2,14 +2,21 @@
 
 #about {
   margin-top: 8.125rem;
+  margin-inline: auto;
+
   padding: 0 2rem;
+
+  max-width: 1064px;
+  width: 100%;
 
   .title {
     text-align: left;
+
+    max-width: 622px;
   }
 
   .topics-container {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +50,31 @@
 
     .separator {
       opacity: 0.2;
-      width: 80%;
+      width: 45%;
+    }
+
+    .separator:nth-of-type(2) {
+      width: 35%;
+    }
+
+    @media (width >= 1024px) {
+      gap: 1.5rem;
+      flex-wrap: nowrap;
+
+      align-items: center;
+
+      .topic p {
+        font-size: $text-sm;
+      }
+
+      .separator {
+        width: 1px;
+        height: 50px;
+      }
+
+      .separator:nth-of-type(2) {
+        width: 1px;
+      }
     }
   }
 }

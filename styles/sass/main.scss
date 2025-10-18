@@ -26,6 +26,24 @@ body {
   position: relative;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c5c5c5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-green-dark;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-beige;
+}
+
 ul {
   list-style: none;
 }
@@ -87,7 +105,7 @@ button {
     height: 100%;
 
     background: $color-green-dark;
-    transition: all 0.6s;
+    transition: all 0.45s;
   }
 
   span {
