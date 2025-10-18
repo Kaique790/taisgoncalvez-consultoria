@@ -73,7 +73,7 @@ button {
 }
 
 .btn {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,6 +86,14 @@ button {
 
   i {
     font-size: 1.15rem;
+  }
+}
+
+.btn-primary {
+  background-color: $color-beige-light;
+
+  &:hover {
+    filter: brightness(90%);
   }
 }
 

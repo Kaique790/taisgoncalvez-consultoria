@@ -9,72 +9,258 @@
   max-width: 1064px;
   width: 100%;
 
+  position: relative;
+
   .title {
     text-align: left;
 
     max-width: 622px;
   }
+}
 
-  .topics-container {
-    margin-top: 2.5rem;
+#about .topics-container {
+  margin-top: 2.5rem;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    gap: 1.8125rem;
+  gap: 1.8125rem;
 
-    .topic {
-      i {
-        font-size: 1.5rem;
-      }
+  position: relative;
 
-      h3 {
-        display: flex;
-        font-size: $text-md;
-        gap: 0.75rem;
+  .topics-decorator {
+    position: absolute;
+    opacity: 0.3;
 
-        align-items: center;
-      }
+    bottom: -60px;
+    right: 0;
+  }
 
-      p {
-        margin-top: 0.5rem;
-      }
-
-      display: flex;
-      flex-direction: column;
+  .topic {
+    i {
+      font-size: 1.5rem;
     }
 
-    .topic:last-child h3 {
-      color: $color-beige;
+    h3 {
+      display: flex;
+      font-size: $text-md;
+      gap: 0.75rem;
+
+      align-items: center;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topic:last-of-type {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .topic:last-of-type::before {
+    content: "";
+    position: absolute;
+
+    height: 1px;
+    width: 150px;
+    background: $color-green-dark;
+
+    bottom: -1.75rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .topic:last-child h3 {
+    color: $color-beige;
+  }
+
+  .separator {
+    opacity: 0.2;
+    width: 45%;
+  }
+
+  .separator:nth-of-type(2) {
+    width: 35%;
+  }
+
+  @media (width >= 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 1rem;
+
+    .separator {
+      width: 1px;
+      height: 50px;
+      display: none;
+    }
+
+    .topic:nth-of-type(3) {
+      border-left: 1px solid #00000018;
+      padding-left: 2rem;
+    }
+  }
+
+  @media (width >= 1024px) {
+    gap: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    .topic p {
+      font-size: $text-sm;
+    }
+
+    .topic:nth-of-type(3) {
+      border-left: none;
+      padding: 0;
     }
 
     .separator {
-      opacity: 0.2;
-      width: 45%;
+      display: block;
     }
 
     .separator:nth-of-type(2) {
-      width: 35%;
+      width: 1px;
+      display: block;
     }
+  }
+}
 
-    @media (width >= 1024px) {
-      gap: 1.5rem;
-      flex-wrap: nowrap;
+#tais-about {
+  margin-top: 3rem;
 
-      align-items: center;
+  .tais-title h3 {
+    font-size: $text-lg;
+  }
 
-      .topic p {
-        font-size: $text-sm;
-      }
+  .tais-title h3 span {
+    color: $color-beige;
+  }
 
-      .separator {
-        width: 1px;
-        height: 50px;
-      }
+  .tais-info {
+    margin-top: 1rem;
 
-      .separator:nth-of-type(2) {
-        width: 1px;
-      }
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 440px;
+    max-width: 100%;
+  }
+
+  .tais-info .img {
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    width: 176px;
+
+    max-width: 100%;
+    display: flex;
+
+    border-radius: 100%;
+    padding: 1rem;
+
+    border: 1px solid #000;
+  }
+
+  .tais-info .img img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .tais-info .text p:first-of-type {
+    background: $color-beige-light;
+    padding: 0.0625rem 1.375rem;
+
+    border-radius: 99999px;
+    width: fit-content;
+
+    font-weight: bold;
+    font-size: $text-sm;
+  }
+
+  .tais-info .text p:last-of-type {
+    margin-top: 1rem;
+  }
+
+  .tais-cards-container {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
+
+    @media (width >= 800px) {
+      display: grid;
+      align-items: start;
+
+      grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .tais-cards-container .card {
+    border: 1px solid $color-black;
+    border-radius: 0.5rem;
+
+    background: $color-bg-card;
+
+    padding: 1rem 1.125rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.625rem;
+  }
+
+  .tais-cards-container .card.outline {
+    background: none;
+  }
+
+  .tais-cards-container .card h4 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tais-cards-container .card .icons {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $color-white-secondary;
+
+    gap: 0.25rem;
+
+    & > div {
+      display: flex;
+      padding: 0.35em;
+
+      background: $color-green-dark;
+      border-radius: 99999rem;
+    }
+  }
+
+  .tais-cards-container .card .icons .phantom {
+    background: none;
+
+    margin-right: -0.5rem;
+
+    font-size: 1.4rem;
+    color: $color-green-dark;
+  }
+
+  .tais-cards-container .card .buttons {
+    display: flex;
+    gap: 0.625rem;
+
+    margin-top: 0.625rem;
+
+    font-size: $text-sm;
   }
 }
