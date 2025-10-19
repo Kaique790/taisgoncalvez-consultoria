@@ -4,6 +4,14 @@ body > header {
   width: 100%;
   background: $color-green-dark;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow: 4px 0px 10px 3px #0000002c;
+
   & > div {
     display: flex;
     padding: 0.75rem 2rem;
@@ -22,6 +30,60 @@ body > header {
   i {
     color: $color-white;
     font-size: 1.25rem;
+  }
+
+  .desktop-navbar {
+    @media (width <= 748px) {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    ul {
+      display: flex;
+
+      font-size: $text-sm;
+
+      li:first-of-type a {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+
+      li:last-of-type a {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+
+      li a {
+        transition: all 0.3s;
+        padding: 0.25rem 0.75rem;
+      }
+
+      li a:hover {
+        background: $color-beige;
+      }
+    }
+
+    .buttons {
+      display: flex;
+
+      a {
+        font-size: $text-sm;
+        align-items: center;
+        display: flex;
+        color: $color-green-dark;
+
+        i {
+          color: $color-green-dark;
+        }
+      }
+    }
+
+    a {
+      color: $color-white;
+    }
   }
 
   .mobile-menu {
@@ -116,7 +178,7 @@ body > header {
     opacity: 0.14;
   }
 
-  ul {
+  #mobile-navbar ul {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -128,7 +190,7 @@ body > header {
     gap: 1rem;
   }
 
-  ul i {
+  #mobile-navbar ul i {
     background: $color-beige-light;
     padding: 0.6rem;
 
@@ -136,7 +198,7 @@ body > header {
     display: flex;
   }
 
-  li a {
+  #mobile-navbar li a {
     display: flex;
     align-items: center;
 
@@ -146,7 +208,7 @@ body > header {
     position: relative;
   }
 
-  li a::after {
+  #mobile-navbar li a::after {
     content: " ";
 
     width: 0px;
@@ -164,11 +226,11 @@ body > header {
     transition: all 0.3s;
   }
 
-  li a:hover::after {
+  #mobile-navbar li a:hover::after {
     width: 150px;
   }
 
-  .buttons {
+  #mobile-navbar .buttons {
     padding: 0 2rem;
     margin: 0 auto;
     margin-top: 2rem;
@@ -187,7 +249,7 @@ body > header {
     }
   }
 
-  .close-navbar {
+  #mobile-navbar .close-navbar {
     max-width: 32px;
 
     margin-inline: auto;
@@ -205,7 +267,7 @@ body > header {
     transition: all 0.3s;
   }
 
-  .close-navbar:hover {
+  #mobile-navbar .close-navbar:hover {
     border-color: transparent;
     background: $color-beige;
   }

@@ -1,6 +1,11 @@
 body > header {
   width: 100%;
   background: #09221f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 4px 0px 10px 3px rgba(0, 0, 0, 0.1725490196);
 }
 body > header > div {
   display: flex;
@@ -15,6 +20,50 @@ body > header > div {
 body > header i {
   color: #ffffff;
   font-size: 1.25rem;
+}
+body > header .desktop-navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (width <= 748px) {
+  body > header .desktop-navbar {
+    display: none;
+  }
+}
+body > header .desktop-navbar ul {
+  display: flex;
+  font-size: 0.875rem;
+}
+body > header .desktop-navbar ul li:first-of-type a {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+body > header .desktop-navbar ul li:last-of-type a {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+body > header .desktop-navbar ul li a {
+  transition: all 0.3s;
+  padding: 0.25rem 0.75rem;
+}
+body > header .desktop-navbar ul li a:hover {
+  background: #bd9b6d;
+}
+body > header .desktop-navbar .buttons {
+  display: flex;
+}
+body > header .desktop-navbar .buttons a {
+  font-size: 0.875rem;
+  align-items: center;
+  display: flex;
+  color: #09221f;
+}
+body > header .desktop-navbar .buttons a i {
+  color: #09221f;
+}
+body > header .desktop-navbar a {
+  color: #ffffff;
 }
 @media (width >= 748px) {
   body > header .mobile-menu {
@@ -89,7 +138,7 @@ body > header .separator {
   margin-block: 1.75rem;
   opacity: 0.14;
 }
-body > header ul {
+body > header #mobile-navbar ul {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -97,20 +146,20 @@ body > header ul {
   margin: 0 auto;
   gap: 1rem;
 }
-body > header ul i {
+body > header #mobile-navbar ul i {
   background: #d9bf9e;
   padding: 0.6rem;
   border-radius: 100%;
   display: flex;
 }
-body > header li a {
+body > header #mobile-navbar li a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: #09221f;
   position: relative;
 }
-body > header li a::after {
+body > header #mobile-navbar li a::after {
   content: " ";
   width: 0px;
   height: 100%;
@@ -122,10 +171,10 @@ body > header li a::after {
   background-color: #d9bf9e;
   transition: all 0.3s;
 }
-body > header li a:hover::after {
+body > header #mobile-navbar li a:hover::after {
   width: 150px;
 }
-body > header .buttons {
+body > header #mobile-navbar .buttons {
   padding: 0 2rem;
   margin: 0 auto;
   margin-top: 2rem;
@@ -135,11 +184,11 @@ body > header .buttons {
   width: 400px;
   max-width: 100%;
 }
-body > header .buttons a:hover #i-i,
-body > header .buttons a:hover #w-i {
+body > header #mobile-navbar .buttons a:hover #i-i,
+body > header #mobile-navbar .buttons a:hover #w-i {
   color: #ffffff;
 }
-body > header .close-navbar {
+body > header #mobile-navbar .close-navbar {
   max-width: 32px;
   margin-inline: auto;
   margin-block: 2rem 0;
@@ -151,7 +200,7 @@ body > header .close-navbar {
   padding: 0.25rem;
   transition: all 0.3s;
 }
-body > header .close-navbar:hover {
+body > header #mobile-navbar .close-navbar:hover {
   border-color: transparent;
   background: #bd9b6d;
 }
@@ -716,6 +765,7 @@ html {
 
 body {
   position: relative;
+  padding-top: 3.8125rem;
 }
 
 ::-webkit-scrollbar {
