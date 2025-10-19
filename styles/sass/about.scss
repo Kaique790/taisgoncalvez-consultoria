@@ -20,6 +20,7 @@
 
 #about .topics-container {
   margin-top: 2.5rem;
+  padding-bottom: 1rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +35,10 @@
 
     bottom: -60px;
     right: 0;
+
+    @media (width >= 1024px) {
+      bottom: -190px;
+    }
   }
 
   .topic {
@@ -58,13 +63,12 @@
   }
 
   .topic:last-of-type {
-    margin-bottom: 2rem;
     position: relative;
   }
 
-  .topic:last-of-type::before {
-    content: "";
+  &::before {
     position: absolute;
+    content: "";
 
     height: 1px;
     width: 150px;

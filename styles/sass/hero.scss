@@ -24,14 +24,14 @@
     margin-top: 3rem;
     width: 100%;
 
-    @media (width <= 1024px) {
+    @media (width <= 930px) {
       max-width: 520px;
       margin-inline: auto;
 
       display: block;
     }
 
-    @media (width >= 1024px) {
+    @media (width >= 930px) {
       grid-column: 2;
 
       margin-top: -1.3rem;
@@ -58,7 +58,7 @@
     z-index: 1;
   }
 
-  @media (width <= 1024px) {
+  @media (width <= 930px) {
     .title {
       max-width: 360px;
       margin-inline: auto;
@@ -70,7 +70,7 @@
     }
   }
 
-  @media (width >= 1024px) {
+  @media (width >= 930px) {
     display: grid;
     grid-template-columns: 400px 1fr;
 
@@ -89,16 +89,20 @@
   display: flex;
   flex-wrap: wrap;
 
-  gap: 3.5rem;
+  justify-content: center;
+
+  gap: 3rem;
 
   .cards-decorator {
     position: absolute;
     top: 450px;
+    left: 0;
 
     opacity: 0.25;
 
     @media (width >= 1024px) {
       top: 30px;
+      left: auto;
       right: 0;
 
       width: 50px;
@@ -204,17 +208,16 @@
     }
   }
 
-  @media (width <= 990px) {
+  margin-inline: auto;
+
+  @media (width <= 900px) {
     max-width: 620px;
-    margin-inline: auto;
   }
 
-  @media (width >= 1024px) {
+  @media (width >= 850px) {
     width: 100%;
 
     grid-column: span 2;
-
-    margin-top: 0;
 
     .card:nth-child(3) {
       margin-left: 0;
@@ -223,5 +226,10 @@
     .card:last-child {
       margin-inline: 0;
     }
+  }
+
+  @media (width >= 1024px) {
+    margin-top: 0;
+    justify-content: start;
   }
 }
