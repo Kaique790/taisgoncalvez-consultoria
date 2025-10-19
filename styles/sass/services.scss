@@ -1,0 +1,154 @@
+@use "variables" as *;
+
+#services {
+  margin-top: 8.125rem;
+  padding: 2rem;
+
+  background: $color-green-dark;
+  color: $color-white;
+
+  .cards-container #carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin: 0 auto;
+    margin-top: 2.625rem;
+
+    position: relative;
+    max-width: fit-content;
+  }
+
+  .card:not(.active) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: scale(120%);
+    transition: all 0.3s;
+  }
+
+  .card.active {
+    opacity: 1;
+    transform: scale(100%);
+
+    pointer-events: auto;
+  }
+
+  .card {
+    position: relative;
+    min-width: 257px;
+    max-width: 257px;
+
+    max-height: 124px;
+    min-height: 124px;
+
+    border-radius: 1rem;
+    padding: 0.875rem 0.75rem;
+
+    background: $color-bg-card-2;
+    color: $color-green-dark;
+  }
+
+  .card:not(.dark)::after {
+    content: "";
+
+    width: 36px;
+    height: 28px;
+
+    background-color: $color-green-dark;
+
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .card.dark {
+    background: $color-gray;
+    color: $color-white;
+
+    .circle:first-of-type {
+      background: $color-white-secondary;
+    }
+  }
+
+  .card h5 {
+    font-size: $text-md;
+    line-height: 150%;
+  }
+
+  .card span {
+    font-weight: normal;
+  }
+
+  .card > div {
+    display: flex;
+    align-items: center;
+
+    justify-content: end;
+    gap: 0.25rem;
+
+    margin-top: 1rem;
+  }
+
+  .card .circle {
+    width: 32px;
+    height: 32px;
+
+    background-color: $color-beige-light;
+    clip-path: circle();
+  }
+
+  .navigation-container {
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.75rem;
+  }
+
+  .navigation-container button {
+    padding: 0.25rem;
+    background: $color-gray;
+
+    color: $color-white-secondary;
+    font-size: 1.1rem;
+
+    display: flex;
+
+    clip-path: circle();
+  }
+
+  #navigation {
+    max-width: 144px;
+    width: 100%;
+
+    display: flex;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navigation > div {
+    width: 20%;
+    height: 0.375rem;
+
+    background: $color-white;
+    border-radius: 88888rem;
+
+    transition: all 0.2s;
+  }
+  #navigation > div.active {
+    width: 30%;
+    background: $color-beige;
+  }
+}

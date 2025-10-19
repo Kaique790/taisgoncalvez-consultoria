@@ -745,6 +745,119 @@ body > header #mobile-navbar .close-navbar:hover {
   }
 }
 
+#services {
+  margin-top: 8.125rem;
+  padding: 2rem;
+  background: #09221f;
+  color: #ffffff;
+}
+#services .cards-container #carousel {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-top: 2.625rem;
+  position: relative;
+  max-width: fit-content;
+}
+#services .card:not(.active) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(120%);
+  transition: all 0.3s;
+}
+#services .card.active {
+  opacity: 1;
+  transform: scale(100%);
+  pointer-events: auto;
+}
+#services .card {
+  position: relative;
+  min-width: 257px;
+  max-width: 257px;
+  max-height: 124px;
+  min-height: 124px;
+  border-radius: 1rem;
+  padding: 0.875rem 0.75rem;
+  background: #eeeeee;
+  color: #09221f;
+}
+#services .card:not(.dark)::after {
+  content: "";
+  width: 36px;
+  height: 28px;
+  background-color: #09221f;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+#services .card.dark {
+  background: #353535;
+  color: #ffffff;
+}
+#services .card.dark .circle:first-of-type {
+  background: #d5d5d5;
+}
+#services .card h5 {
+  font-size: 1rem;
+  line-height: 150%;
+}
+#services .card span {
+  font-weight: normal;
+}
+#services .card > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+#services .card .circle {
+  width: 32px;
+  height: 32px;
+  background-color: #d9bf9e;
+  clip-path: circle();
+}
+#services .navigation-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+#services .navigation-container button {
+  padding: 0.25rem;
+  background: #353535;
+  color: #d5d5d5;
+  font-size: 1.1rem;
+  display: flex;
+  clip-path: circle();
+}
+#services #navigation {
+  max-width: 144px;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+#services #navigation > div {
+  width: 20%;
+  height: 0.375rem;
+  background: #ffffff;
+  border-radius: 88888rem;
+  transition: all 0.2s;
+}
+#services #navigation > div.active {
+  width: 30%;
+  background: #bd9b6d;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
