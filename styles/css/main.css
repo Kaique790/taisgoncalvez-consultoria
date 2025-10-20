@@ -566,6 +566,60 @@ body > header #mobile-navbar .close-navbar:hover {
 #tais-about .tais-cards-container .card.outline {
   background: none;
 }
+#tais-about .card.w-img {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+#tais-about .card.w-img .buttons a,
+#tais-about .card.w-img .buttons span {
+  white-space: nowrap;
+}
+#tais-about .card.w-img > div {
+  order: 2;
+  padding: 1rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#tais-about .card.w-img > div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#tais-about .card.w-img > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+#tais-about .card.w-img .icons {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+@media (width >= 1024px) {
+  #tais-about .card.w-img {
+    flex-direction: row;
+  }
+  #tais-about .card.w-img > img {
+    height: auto;
+    order: 2;
+  }
+}
+@media (width <= 800px) {
+  #tais-about .card.w-img {
+    flex-direction: row;
+  }
+  #tais-about .card.w-img > img {
+    height: auto;
+    order: 2;
+  }
+}
 #tais-about .tais-cards-container .card h4 {
   display: flex;
   justify-content: space-between;
@@ -592,6 +646,7 @@ body > header #mobile-navbar .close-navbar:hover {
 #tais-about .tais-cards-container .card .buttons {
   display: flex;
   gap: 0.625rem;
+  width: 100%;
   margin-top: 0.625rem;
   font-size: 0.875rem;
 }
