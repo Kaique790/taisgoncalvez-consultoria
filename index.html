@@ -182,7 +182,7 @@
         />
         <div class="left">
           <div class="title">
-            <h1>
+            <h1 class="animation animation-blur">
               Agende sua <span>Assessoria</span> com a
               <span>TG Consultoria.</span>
             </h1>
@@ -190,11 +190,14 @@
           </div>
 
           <div class="buttons">
-            <a href="" class="btn whatsapp-btn">
+            <a href="" class="btn whatsapp-btn animation animation-transform">
               Fale com uma profissional
               <i id="w-i" class="ph ph-whatsapp-logo"></i>
             </a>
-            <a href="" class="btn outline-btn">
+            <a
+              href=""
+              class="btn outline-btn delay animation animation-transform"
+            >
               <span>
                 Visite nosso instagram
                 <i id="w-i" class="ph ph-instagram-logo"></i>
@@ -203,7 +206,7 @@
           </div>
         </div>
 
-        <div class="tais">
+        <div class="tais animation animation-blur">
           <img src="./assets/images/tais/tais-hero.svg" alt="" />
         </div>
 
@@ -213,7 +216,7 @@
             src="./assets/images/decorators/decorators-1.svg"
           />
 
-          <div class="card">
+          <div data-show-percent="0.5" class="card animation animation-show-y">
             <header>
               <span>Trabalhe conosco</span>
               <h4>Assessoria para empresas públicas e privadas.</h4>
@@ -225,7 +228,7 @@
             </p>
           </div>
 
-          <div class="card outline">
+          <div class="card outline animation animation-show-y">
             <header>
               <span>Agende o seu</span>
               <h4>Transforme contratos em resultados visíveis.</h4>
@@ -238,7 +241,7 @@
             </p>
           </div>
 
-          <div class="card">
+          <div class="card animation animation-show-y">
             <header>
               <span>Junte-se a nós</span>
               <h4>Garanta eficiência para sua empresa.</h4>
@@ -256,7 +259,7 @@
 
       <section id="about">
         <div class="title">
-          <h2>
+          <h2 class="animation animation-blur">
             Sobre a consultoria que vai
             <span>alavancar sua empresa.</span>
           </h2>
@@ -309,10 +312,10 @@
           </div>
 
           <div class="tais-info">
-            <div class="img">
+            <div class="img animation animation-show-x-l">
               <img src="./assets/images/tais/tais-sm.svg" alt="" />
             </div>
-            <div class="text">
+            <div class="text animation animation-show-x-r">
               <p>Taís Gonçalves</p>
               <p>
                 Uma breve descrição aqui Uma breve descrição aqui Uma breve
@@ -322,7 +325,7 @@
           </div>
 
           <div class="tais-cards-container">
-            <div class="card w-img">
+            <div class="card w-img animation animation-show-y">
               <div>
                 <h4>Minha trajetória:</h4>
                 <p>
@@ -348,7 +351,7 @@
               <img src="./assets/images/about-card-1.svg" alt="" />
             </div>
 
-            <div class="card outline w-img">
+            <div class="card outline w-img animation animation-show-y">
               <div>
                 <h4>Minha missão:</h4>
                 <p>
@@ -376,7 +379,7 @@
               <img src="./assets/images/about-card-2.svg" alt="" />
             </div>
 
-            <div class="card">
+            <div class="card animation animation-show-y">
               <h4>
                 Vamos trabalhar juntos:
                 <div class="icons">
@@ -398,7 +401,7 @@
               </div>
             </div>
 
-            <div class="card outline">
+            <div class="card outline animation animation-show-y">
               <h4>
                 Transforme contratos em resultados.
                 <div class="icons">
@@ -418,23 +421,49 @@
           </div>
 
           <section id="tais-skills">
-            <div class="img">
+            <div class="img animation animation-blur">
               <img src="./assets/images/tais/tais-about.svg" alt="" />
             </div>
 
             <div class="skills">
-              <p class="k1">Perita Judicial.</p>
-              <div class="k2 beige"><i class="ph-bold ph-certificate"></i></div>
-              <p class="k3">Administradora</p>
-              <p class="k4 beige">Empresária</p>
-              <div class="k5"><i class="ph-bold ph-graduation-cap"></i></div>
-              <p class="k6 outline">Gestora</p>
-              <p class="k7 outline">MBA em Finança Corporativa</p>
+              <p class="k1 animation animation-boom" data-show-percent="0.75">
+                Perita Judicial.
+              </p>
+              <div
+                class="k2 beige animation animation-boom"
+                data-show-percent="0.75"
+              >
+                <i class="ph-bold ph-certificate"></i>
+              </div>
+              <p class="k3 animation animation-boom" data-show-percent="0.75">
+                Administradora
+              </p>
+              <p
+                class="k4 beige animation animation-boom"
+                data-show-percent="0.75"
+              >
+                Empresária
+              </p>
+              <div class="k5 animation animation-boom" data-show-percent="0.75">
+                <i class="ph-bold ph-graduation-cap"></i>
+              </div>
+              <p
+                class="k6 outline animation animation-boom"
+                data-show-percent="0.75"
+              >
+                Gestora
+              </p>
+              <p
+                class="k7 outline animation animation-boom"
+                data-show-percent="0.75"
+              >
+                MBA em Finança Corporativa
+              </p>
             </div>
 
             <article>
               <div>
-                <h4>TG Consultoria</h4>
+                <h4 class="animation typewriter">TG Consultoria</h4>
                 <p>A Assessoria que faz sua empresa crescer</p>
               </div>
 
@@ -466,7 +495,7 @@
 
       <section id="services">
         <div class="title">
-          <h2>
+          <h2 class="animation animation-blur">
             Conheça <span>nossos serviços</span> e como aplicaremos na
             <span>sua empresa</span>.
           </h2>
@@ -571,5 +600,6 @@
     </main>
 
     <script src="./js/scripts.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

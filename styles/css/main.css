@@ -96,8 +96,8 @@ body > header #mobile-overlay {
   top: 0;
   left: 0;
   opacity: 0;
-  pointer-events: none;
   z-index: 2;
+  pointer-events: none;
   background: rgba(36, 36, 36, 0.0941176471);
   backdrop-filter: blur(6px);
 }
@@ -308,7 +308,7 @@ body > header #mobile-navbar .close-navbar:hover {
 }
 #hero .cards .card:last-child {
   margin-inline: auto;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/bg-card-2.svg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/hero/bg-card-2.svg");
 }
 #hero .cards .card {
   border: 1px solid #09221f;
@@ -322,7 +322,7 @@ body > header #mobile-navbar .close-navbar:hover {
   width: 270px;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1215686275);
   transition: all 0.3s;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/bg-card-1.svg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/images/hero/bg-card-1.svg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -948,6 +948,112 @@ body > header #mobile-navbar .close-navbar:hover {
   right: -80px;
   bottom: 0px;
   opacity: 0.3;
+}
+
+.animation-blur {
+  filter: blur(8px);
+  transition: all 0.6s;
+}
+
+.animation-blur.animate {
+  filter: blur(0);
+}
+
+.animation-transform {
+  transform: scale(150%);
+}
+
+.animation-transform.animate {
+  rotate: 0deg;
+  transform: scale(100%);
+}
+
+.animation-show-y {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s;
+}
+
+.animation-show-y.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animation-show-x-l {
+  opacity: 1;
+  transform: translateX(-80px);
+  transition: all 0.4s;
+}
+
+.animation-show-x-l.animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.animation-show-x-r {
+  opacity: 1;
+  transform: translateX(80px);
+  transition: all 0.4s;
+}
+
+.animation-show-x-r.animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.animation-boom {
+  rotate: -5deg;
+  opacity: 0;
+  transform: scale(110%);
+  transition: all 0.4s;
+}
+
+.animation-boom.animate {
+  rotate: 0deg;
+  opacity: 1;
+  transform: scale(100%);
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #09221f;
+  animation: typing 5s steps(60, end), blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+.typewriter {
+  animation-fill-mode: forwards;
+}
+
+.typewriter::after {
+  content: "";
+  animation: hide-cursor 0s 5s forwards;
+}
+
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
+.animation.delay {
+  transition: all 0.6s !important;
 }
 
 * {

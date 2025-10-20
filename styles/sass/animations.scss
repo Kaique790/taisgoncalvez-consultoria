@@ -1,0 +1,117 @@
+@use "variables" as *;
+
+.animation-blur {
+  filter: blur(8px);
+  transition: all 0.6s;
+}
+
+.animation-blur.animate {
+  filter: blur(0);
+}
+
+.animation-transform {
+  transform: scale(150%);
+}
+
+.animation-transform.animate {
+  rotate: 0deg;
+  transform: scale(100%);
+}
+
+.animation-show-y {
+  opacity: 0;
+  transform: translateY(100px);
+
+  transition: all 0.4s;
+}
+
+.animation-show-y.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animation-show-x-l {
+  opacity: 1;
+  transform: translateX(-80px);
+
+  transition: all 0.4s;
+}
+
+.animation-show-x-l.animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.animation-show-x-r {
+  opacity: 1;
+  transform: translateX(80px);
+
+  transition: all 0.4s;
+}
+
+.animation-show-x-r.animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.animation-boom {
+  rotate: -5deg;
+  opacity: 0;
+  transform: scale(110%);
+
+  transition: all 0.4s;
+}
+
+.animation-boom.animate {
+  rotate: 0deg;
+  opacity: 1;
+  transform: scale(100%);
+}
+
+.typewriter {
+  display: inline-block;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 3px solid $color-green-dark;
+  animation: typing 5s steps(60, end), blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typewriter {
+  animation-fill-mode: forwards;
+}
+
+.typewriter::after {
+  content: "";
+  animation: hide-cursor 0s 5s forwards;
+}
+
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
+
+.animation.delay {
+  transition: all 0.6s !important;
+}
