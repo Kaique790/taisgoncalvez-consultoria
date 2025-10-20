@@ -769,6 +769,11 @@ body > header #mobile-navbar .close-navbar:hover {
   max-width: 100%;
   margin: 0 auto;
 }
+#services .cards-container {
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
+}
 #services .cards-container #carousel {
   display: flex;
   justify-content: center;
@@ -874,6 +879,20 @@ body > header #mobile-navbar .close-navbar:hover {
 #services #navigation > div.active {
   width: 30%;
   background: #bd9b6d;
+}
+#services .blur {
+  position: absolute;
+  opacity: 0.13;
+  width: 300px;
+  bottom: -55px;
+  left: -110px;
+}
+#services .decorators {
+  position: absolute;
+  width: 50px;
+  right: -80px;
+  bottom: 0px;
+  opacity: 0.3;
 }
 
 * {

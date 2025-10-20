@@ -13,6 +13,13 @@
     margin: 0 auto;
   }
 
+  .cards-container {
+    width: fit-content;
+    position: relative;
+
+    margin: 0 auto;
+  }
+
   .cards-container #carousel {
     display: flex;
     justify-content: center;
@@ -153,8 +160,29 @@
 
     transition: all 0.2s;
   }
+
   #navigation > div.active {
     width: 30%;
     background: $color-beige;
+  }
+
+  .blur {
+    position: absolute;
+    opacity: 0.13;
+
+    width: 300px;
+
+    bottom: -55px;
+    left: -110px;
+  }
+
+  .decorators {
+    position: absolute;
+    width: 50px;
+
+    right: -80px;
+    bottom: 0px;
+
+    opacity: 0.3;
   }
 }
