@@ -10,49 +10,94 @@ const carousel = document.getElementById("carousel");
 const cardsCarousel = carousel.getElementsByClassName("card");
 
 let activeCard = 0;
-cardsCarousel[activeCard].classList.add("active");
+let activeCount = getActiveCount();
 
 const navigationCarousel = document.getElementById("navigation");
 
-for (const _ of cardsCarousel) {
-  const navigator = document.createElement("div");
-  navigationCarousel.appendChild(navigator);
+initCarousel();
+
+window.addEventListener("resize", () => {
+  const newCount = getActiveCount();
+  if (newCount !== activeCount) {
+    activeCount = newCount;
+    initCarousel();
+  }
+});
+
+function initCarousel() {
+  rebuildNavigation();
+  updateActiveCards();
 }
 
-const navigators = navigationCarousel.getElementsByTagName("div");
-navigators[activeCard].classList.add("active");
+function getActiveCount() {
+  const total = cardsCarousel.length;
 
-for (let i = 0; i < navigators.length; i++) {
-  navigators[i].onclick = () => selectActiveCard(i);
+  if (window.innerWidth >= 950) return Math.min(3, total);
+  if (window.innerWidth >= 650) return Math.min(2, total);
+  return 1;
+}
+
+function rebuildNavigation() {
+  navigationCarousel.innerHTML = "";
+
+  const total = cardsCarousel.length;
+  const groupCount = Math.ceil(total / activeCount);
+
+  for (let i = 0; i < groupCount; i++) {
+    const navigator = document.createElement("div");
+    navigator.classList.add("navigator");
+    navigator.onclick = () => selectGroup(i);
+    navigationCarousel.appendChild(navigator);
+  }
 }
 
 function removeActiveCard() {
   for (let i = 0; i < cardsCarousel.length; i++) {
     cardsCarousel[i].classList.remove("active");
-    navigators[i].classList.remove("active");
+  }
+
+  const navigators = navigationCarousel.getElementsByClassName("navigator");
+  for (let n of navigators) {
+    n.classList.remove("active");
+  }
+}
+
+function updateActiveCards() {
+  removeActiveCard();
+
+  for (let i = 0; i < activeCount; i++) {
+    const index = activeCard + i;
+    if (index < cardsCarousel.length) {
+      cardsCarousel[index].classList.add("active");
+    }
+  }
+
+  const activeGroup = Math.floor(activeCard / activeCount);
+  const navigators = navigationCarousel.getElementsByClassName("navigator");
+  if (navigators[activeGroup]) {
+    navigators[activeGroup].classList.add("active");
   }
 }
 
 function nextCarousel() {
-  removeActiveCard();
+  const groupCount = Math.ceil(cardsCarousel.length / activeCount);
+  const activeGroup = Math.floor(activeCard / activeCount);
+  const nextGroup = (activeGroup + 1) % groupCount;
 
-  activeCard = (activeCard + 1) % cardsCarousel.length;
-  cardsCarousel[activeCard].classList.add("active");
-  navigators[activeCard].classList.add("active");
+  activeCard = nextGroup * activeCount;
+  updateActiveCards();
 }
 
 function previousCarousel() {
-  removeActiveCard();
+  const groupCount = Math.ceil(cardsCarousel.length / activeCount);
+  const activeGroup = Math.floor(activeCard / activeCount);
+  const prevGroup = (activeGroup - 1 + groupCount) % groupCount;
 
-  activeCard = (activeCard - 1 + cardsCarousel.length) % cardsCarousel.length;
-  cardsCarousel[activeCard].classList.add("active");
-  navigators[activeCard].classList.add("active");
+  activeCard = prevGroup * activeCount;
+  updateActiveCards();
 }
 
-function selectActiveCard(index) {
-  removeActiveCard();
-
-  activeCard = index;
-  cardsCarousel[activeCard].classList.add("active");
-  navigators[activeCard].classList.add("active");
+function selectGroup(groupIndex) {
+  activeCard = groupIndex * activeCount;
+  updateActiveCards();
 }

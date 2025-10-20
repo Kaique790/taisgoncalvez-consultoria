@@ -119,7 +119,7 @@ body > header {
 
   #mobile-overlay {
     position: fixed;
-    width: 100vw;
+    min-width: 100%;
     height: 100vh;
 
     top: 0;

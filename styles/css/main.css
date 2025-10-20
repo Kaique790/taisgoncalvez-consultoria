@@ -91,7 +91,7 @@ body > header #mobile-navbar {
 }
 body > header #mobile-overlay {
   position: fixed;
-  width: 100vw;
+  min-width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
@@ -897,6 +897,13 @@ html {
 body {
   position: relative;
   padding-top: 3.8125rem;
+  min-width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
