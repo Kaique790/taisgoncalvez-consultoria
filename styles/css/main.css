@@ -602,7 +602,7 @@ body > header #mobile-navbar .close-navbar:hover {
   flex-direction: row;
   font-size: 1rem;
 }
-@media (width >= 1024px) {
+@media (width <= 800px) {
   #tais-about .card.w-img {
     flex-direction: row;
   }
@@ -611,7 +611,7 @@ body > header #mobile-navbar .close-navbar:hover {
     order: 2;
   }
 }
-@media (width <= 800px) {
+@media (width >= 1024px) {
   #tais-about .card.w-img {
     flex-direction: row;
   }
