@@ -21,15 +21,15 @@ body > header i {
   color: #ffffff;
   font-size: 1.25rem;
 }
-body > header .desktop-navbar {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
 @media (width <= 748px) {
   body > header .desktop-navbar {
     display: none;
   }
+}
+body > header .desktop-navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 body > header .desktop-navbar ul {
   display: flex;
@@ -283,7 +283,6 @@ body > header #mobile-navbar .close-navbar:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
-  margin-inline: auto;
 }
 #hero .cards .cards-decorator {
   width: 40px;
@@ -371,6 +370,9 @@ body > header #mobile-navbar .close-navbar:hover {
   background: #09221f;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2666666667);
 }
+#hero .cards {
+  margin-inline: auto;
+}
 @media (width <= 900px) {
   #hero .cards {
     max-width: 620px;
@@ -429,10 +431,6 @@ body > header #mobile-navbar .close-navbar:hover {
     bottom: -190px;
   }
 }
-#about .topics-container .topic {
-  display: flex;
-  flex-direction: column;
-}
 #about .topics-container .topic i {
   font-size: 1.5rem;
 }
@@ -444,6 +442,10 @@ body > header #mobile-navbar .close-navbar:hover {
 }
 #about .topics-container .topic p {
   margin-top: 0.5rem;
+}
+#about .topics-container .topic {
+  display: flex;
+  flex-direction: column;
 }
 #about .topics-container .topic:last-of-type {
   position: relative;
@@ -969,19 +971,19 @@ body > header #mobile-navbar .close-navbar:hover {
   width: 266px;
   margin-left: auto;
 }
-#steps .title h2.md {
-  display: none;
+#steps .title h2 .md {
+  display: inline;
 }
 @media (width >= 728px) {
   #steps .title h2 {
-    width: auto;
-    margin-left: 0;
+    width: fit-content;
   }
-  #steps .title h2 br:not(.md) {
+  #steps .title h2 br {
     display: none;
   }
   #steps .title h2 .md {
     display: block;
+    margin-left: 2rem;
   }
 }
 #steps .title p {
@@ -1016,6 +1018,11 @@ body > header #mobile-navbar .close-navbar:hover {
   opacity: 0.5;
   top: 100px;
   left: 50px;
+}
+@media (width >= 1024px) {
+  #steps .decorators {
+    left: 100px;
+  }
 }
 #steps .steps {
   display: flex;
