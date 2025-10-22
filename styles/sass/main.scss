@@ -3,6 +3,7 @@
 @use "hero";
 @use "about";
 @use "services";
+@use "steps";
 @use "animations";
 
 * {
@@ -18,10 +19,15 @@ html {
 
   font-size: 1rem;
   font-family: "poppins", sans-serif;
+
+  @media (width <= 500px) {
+    font-size: 96%;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,7 +37,7 @@ body {
   min-width: 100%;
   max-width: 100%;
 
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 main {

@@ -1,0 +1,171 @@
+#steps {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 8.125rem 2rem;
+
+  position: relative;
+
+  .title {
+    text-align: left;
+
+    h2 {
+      width: 266px;
+      margin-left: auto;
+
+      &.md {
+        display: none;
+      }
+
+      @media (width >= 728px) {
+        width: auto;
+        margin-left: 0;
+
+        br:not(.md) {
+          display: none;
+        }
+
+        .md {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      margin-left: auto;
+      text-align: right;
+      width: 264px;
+
+      @media (width >= 728px) {
+        margin-right: 2rem;
+        width: 500px;
+        text-align: left;
+      }
+    }
+
+    div {
+      margin-left: 4rem;
+
+      @media (width >= 728px) {
+        display: inline;
+        margin-left: 0;
+      }
+    }
+
+    @media (width >= 728px) {
+      margin-right: 1rem;
+    }
+  }
+
+  .decorators {
+    width: 64px;
+
+    position: absolute;
+    opacity: 0.5;
+
+    top: 100px;
+    left: 50px;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin-top: 3rem;
+
+    .content {
+      margin-top: 2rem;
+    }
+
+    .s2 {
+      text-align: right;
+      position: relative;
+
+      @media (width >= 728px) {
+        .st-img {
+          order: 2;
+        }
+      }
+    }
+
+    .s2 .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      max-width: 290px;
+      margin-left: auto;
+
+      a {
+        margin-top: 1rem;
+        width: fit-content;
+
+        white-space: nowrap;
+
+        margin-left: auto;
+      }
+
+      @media (width >= 728px) {
+        max-width: 450px;
+        margin-top: 0;
+      }
+    }
+
+    .s2 .arrow {
+      position: absolute;
+      width: 10%;
+
+      left: 30px;
+      top: -10px;
+
+      @media (width >=500px) {
+        width: 80px;
+      }
+
+      @media (width >= 728px) {
+        top: -70px;
+        right: 60px;
+
+        width: 60px;
+
+        rotate: 329deg;
+      }
+
+      @media (width >= 1024px) {
+        top: -70px;
+
+        width: 80px;
+      }
+    }
+
+    .s3 {
+      position: relative;
+    }
+
+    .s3 .arrow {
+      position: absolute;
+      width: 104px;
+      right: 20px;
+
+      @media (width >= 500px) {
+        width: 150px;
+      }
+
+      @media (width >= 728px) {
+        top: -30px;
+        right: 60px;
+
+        width: 120px;
+      }
+    }
+
+    & > div {
+      @media (width >= 728px) {
+        display: flex;
+
+        gap: 2rem;
+      }
+    }
+  }
+}

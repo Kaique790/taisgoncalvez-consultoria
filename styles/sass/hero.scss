@@ -94,6 +94,7 @@
   gap: 3rem;
 
   .cards-decorator {
+    width: 40px;
     position: absolute;
     top: 450px;
     left: 0;
@@ -107,6 +108,10 @@
 
       width: 50px;
       opacity: 0.4;
+    }
+
+    @media (width >= 500px) {
+      width: 60px;
     }
   }
 
