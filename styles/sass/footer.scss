@@ -1,0 +1,114 @@
+@use "variables.scss" as *;
+
+#footer {
+  background: $color-green-dark;
+  color: $color-white;
+
+  .footer-content {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    padding: 0 2rem;
+    padding-top: 4rem;
+
+    .title {
+      text-align: left;
+    }
+
+    .content {
+      margin-top: 2.875rem;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: start;
+      align-items: center;
+
+      gap: 1.5rem;
+
+      & > div,
+      & > ul {
+        display: flex;
+        flex-direction: column;
+
+        width: fit-content;
+
+        gap: 0.75rem;
+
+        &:not(:last-child) {
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #ffffff11;
+
+          @media (width >=600px) {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+        }
+
+        @media (width >=600px) {
+          grid-row: span 2;
+        }
+      }
+
+      @media (width >=600px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        grid-template-rows: 50px 1fr;
+
+        justify-items: center;
+        align-items: start;
+
+        .cnpj,
+        .social-media {
+          grid-row: span 1;
+        }
+
+        .social-media {
+          grid-column: 3;
+        }
+
+        .fast-links {
+          grid-row: span 2 !important;
+
+          @media (width >= 940px) {
+            margin-top: -4rem;
+          }
+        }
+      }
+    }
+
+    .content .contact-pins {
+      display: flex;
+      gap: 1rem;
+
+      @media (width >= 600px) {
+        flex-direction: column;
+      }
+    }
+
+    .content .social-media {
+      & > div {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      a {
+        clip-path: circle();
+        font-size: 1.5rem;
+
+        color: $color-green-dark;
+        background: $color-white;
+
+        display: flex;
+        padding: 0.25rem;
+      }
+    }
+
+    .content .fast-links a {
+      color: $color-white-secondary;
+    }
+  }
+}
