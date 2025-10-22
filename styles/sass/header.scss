@@ -1,8 +1,29 @@
 @use "variables" as *;
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body > header {
   width: 100%;
-  background: $color-green-dark;
+
+  background: linear-gradient(
+    45deg,
+    $color-green-dark,
+    lighten($color-green-dark, 10%),
+    darken($color-green-dark, 10%),
+    $color-green-dark
+  );
+  background-size: 400% 400%;
+  animation: moveGradient 4s ease infinite;
 
   position: fixed;
   top: 0;

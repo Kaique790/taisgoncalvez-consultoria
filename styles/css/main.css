@@ -1,6 +1,19 @@
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 body > header {
   width: 100%;
-  background: #09221f;
+  background: linear-gradient(45deg, #09221f, rgb(19.6744186047, 74.3255813953, 67.7674418605), black, #09221f);
+  background-size: 400% 400%;
+  animation: moveGradient 4s ease infinite;
   position: fixed;
   top: 0;
   left: 0;
