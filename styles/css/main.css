@@ -409,9 +409,9 @@ body > header #mobile-navbar .close-navbar:hover {
 }
 
 #about {
-  margin-top: 8.125rem;
   margin-inline: auto;
   padding: 0 2rem;
+  padding-top: 8.125rem;
   max-width: 1064px;
   width: 100%;
   position: relative;
@@ -1324,9 +1324,9 @@ body > header #mobile-navbar .close-navbar:hover {
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body,
