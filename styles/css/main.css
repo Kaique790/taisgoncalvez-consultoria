@@ -1216,6 +1216,52 @@ body > header #mobile-navbar .close-navbar:hover {
 #footer .footer-content .content .fast-links a {
   color: #d5d5d5;
 }
+#footer .footer-content .end {
+  margin-top: 3rem;
+}
+@media (width >= 600px) {
+  #footer .footer-content .end {
+    display: flex;
+  }
+}
+#footer .footer-content .end iframe {
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+#footer .footer-content .logo {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+#footer .footer-content .logo .img {
+  width: 200px;
+  max-width: 100%;
+}
+#footer .footer-content .logo .blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+}
+#footer .footer-content .copy {
+  margin-top: 3rem;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+#footer .footer-content .copy a {
+  color: #ffffff;
+}
+#footer .footer-content .copy a:hover {
+  text-decoration: underline;
+}
 
 .animation-blur {
   filter: blur(8px);
