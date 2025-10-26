@@ -1,3 +1,5 @@
+@use "variables.scss" as *;
+
 #steps {
   margin: 0 auto;
   max-width: 1024px;
@@ -65,7 +67,6 @@
 
     top: 100px;
     left: 50px;
-
 
     @media (width >=1024px) {
       left: 100px;
@@ -165,11 +166,68 @@
       }
     }
 
-    &>div {
+    & > div {
       @media (width >=728px) {
         display: flex;
 
         gap: 2rem;
+      }
+    }
+  }
+
+  .long-card {
+    margin-top: 3rem;
+
+    background: $color-white;
+    border-radius: 3.75rem;
+
+    text-align: center;
+
+    .content {
+      padding: 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 1.75rem;
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
+
+    .interprise {
+      background: $color-green-dark;
+      color: $color-white;
+
+      font-family: "Abril Fatface", serif;
+      font-size: 3rem;
+
+      border-radius: 3.75rem;
+      padding: 2.5rem;
+
+      position: relative;
+      z-index: 1;
+
+      img {
+        width: 9rem;
+        max-width: 100%;
+      }
+    }
+
+    @media (width >= 748px) {
+      display: flex;
+      width: fit-content;
+
+      margin-inline: auto;
+
+      .content {
+        text-align: left;
+        max-width: 355px;
+      }
+
+      .interprise {
+        margin-left: -22rem;
       }
     }
   }

@@ -1123,6 +1123,49 @@ body > header #mobile-navbar .close-navbar:hover {
     gap: 2rem;
   }
 }
+#steps .long-card {
+  margin-top: 3rem;
+  background: #ffffff;
+  border-radius: 3.75rem;
+  text-align: center;
+}
+#steps .long-card .content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+#steps .long-card .content h4 {
+  font-size: 2rem;
+}
+#steps .long-card .interprise {
+  background: #09221f;
+  color: #ffffff;
+  font-family: "Abril Fatface", serif;
+  font-size: 3rem;
+  border-radius: 3.75rem;
+  padding: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+#steps .long-card .interprise img {
+  width: 9rem;
+  max-width: 100%;
+}
+@media (width >= 748px) {
+  #steps .long-card {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+  }
+  #steps .long-card .content {
+    text-align: left;
+    max-width: 355px;
+  }
+  #steps .long-card .interprise {
+    margin-left: -22rem;
+  }
+}
 
 #footer {
   background: #09221f;
