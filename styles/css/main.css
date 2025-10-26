@@ -1168,7 +1168,7 @@ body > header #mobile-navbar .close-navbar:hover {
 }
 
 #footer {
-  background: #09221f;
+  background: #141414;
   color: #ffffff;
 }
 #footer .footer-content {
@@ -1176,9 +1176,6 @@ body > header #mobile-navbar .close-navbar:hover {
   margin: 0 auto;
   padding: 0 2rem;
   padding-top: 4rem;
-}
-#footer .footer-content .title {
-  text-align: left;
 }
 #footer .footer-content .content {
   margin-top: 2.875rem;
@@ -1289,9 +1286,9 @@ body > header #mobile-navbar .close-navbar:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 500px;
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  opacity: 0.1;
 }
 #footer .footer-content .copy {
   margin-top: 3rem;

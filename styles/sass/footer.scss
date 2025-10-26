@@ -1,7 +1,7 @@
 @use "variables.scss" as *;
 
 #footer {
-  background: $color-green-dark;
+  background: $color-black;
   color: $color-white;
 
   .footer-content {
@@ -10,10 +10,6 @@
 
     padding: 0 2rem;
     padding-top: 4rem;
-
-    .title {
-      text-align: left;
-    }
 
     .content {
       margin-top: 2.875rem;
@@ -149,11 +145,11 @@
       top: 50%;
       left: 50%;
 
-      width: 100%;
+      width: 500px;
 
       transform: translate(-50%, -50%);
 
-      opacity: 0.2;
+      opacity: 0.1;
     }
 
     .copy {
